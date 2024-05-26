@@ -1,0 +1,1012 @@
+class CfgFunctions {
+	// #include "functions_Ambient\functions_Ambient.hpp"
+	// #include "functions_Count\functions_Count.hpp"
+	#include "functions_Delete\functions_Delete.hpp"
+	#include "functions_Effects\functions_Effects.hpp"
+	// #include "functions_Find\functions_Find.hpp"
+	#include "functions_Get\functions_Get.hpp"
+	#include "functions_Heli\functions_Heli.hpp"
+	// #include "functions_Information\functions_Information.hpp"
+	#include "functions_Missions\functions_Missions.hpp"
+	#include "functions_Order\functions_Order.hpp"
+	// #include "functions_Patrol\functions_Patrol.hpp"
+	// #include "functions_Revive\functions_Revive.hpp"
+	#include "functions_Spawn\functions_Spawn.hpp"
+	// #include "functions_Test\functions_Test.hpp"
+	// #include "functions_Tactical\functions_Tactical.hpp"
+	// #include "functions_Utilities\functions_Utilities.hpp"
+	// #include "functions_Wayfinder\functions_Wayfinder.hpp"
+};
+
+// #include "dialogs\textDisplays.hpp"
+// #include "dialogs\killchain.hpp"
+
+respawn = 3;
+respawndelay = 3;
+respawnButton = 1;
+respawnOnStart = -1; // previous, no respawn scripts run 
+// respawnOnStart = 0; // new change, respawn scripts will run 
+respawnTemplates[] = {"MenuPosition", "Tickets", "Spectator", "EndMission"};
+enableDebugConsole = 1;
+allowFunctionsLog = 1;
+respawnDialog = 1;
+
+
+
+
+
+overviewText = "KILLCHAIN HELI-OPS";
+overviewPicture = "media\images\loadscreen3.jpg";
+author = "Reggs";
+onLoadName = "KILLCHAIN HELI-OPS";
+onLoadMission = "KILLCHAIN HELI-OPS - ALPHA v0.1";
+loadScreen = __EVAL(["media\images\loadScreen1.jpg", "media\images\loadScreen2.jpg", "media\images\loadScreen3.jpg", "media\images\loadScreen4.jpg", "media\images\loadScreen5.jpg", "media\images\loadScreen6.jpg", "media\images\loadScreen7.jpg", "media\images\loadScreen8.jpg", "media\images\loadScreen9.jpg", "media\images\loadScreen10.jpg", "media\images\loadScreen11.jpg", "media\images\loadScreen12.jpg", "media\images\loadScreen13.jpg", "media\images\loadScreen14.jpg"] select floor random 14);
+
+disableChannels[] = { 0, 1, 2, 3, 4 };
+
+joinUnassigned = 1;
+
+// class vn_whitelisted_arsenal_loadouts
+// {
+// 	class vn_default2
+// 	{
+// 		displayname = STR_VN_DLC_DEFAULT_DN2;
+
+// 		items[] =
+// 		{
+// 			{"A3C_Terminal_NoUAV",{0,0,0,0}},
+			
+// 		};
+// 	};
+// };
+
+class Header {
+	gameType =  "COOP";	
+	minPlayers = 1;	
+	maxPlayers = 20;
+};
+
+// // new
+// class CfgDebriefing
+// {  
+// 	class End1
+// 	{
+// 		title = "Patrol Completed";
+// 		subtitle = "";
+// 		description = "You successfully achieved all of the objectives, outstanding work!";
+// 		// pictureBackground = "";
+// 		// picture = "";
+// 		// pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+// 	};
+// };
+
+
+
+class CfgSounds {
+	sounds[] = {};
+
+	class newRespawn {
+		name = "newRespawn";
+		sound[] = {"media\voice3\newRespawn.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class authority {
+		name = "authority";
+		sound[] = {"media\voice3\authority.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class loadout {
+		name = "loadout";
+		sound[] = {"media\voice3\loadout.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class luck {
+		name = "luck";
+		sound[] = {"media\voice3\luck.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class welcome {
+		name = "welcome";
+		sound[] = {"media\voice3\welcome.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class alreadyLive {
+		name = "alreadyLive";
+		sound[] = {"media\voice3\alreadyLive.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class moveToNext {
+		name = "moveToNext";
+		sound[] = {"media\voice3\moveToNext.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class moveToNext2 {
+		name = "moveToNext2";
+		sound[] = {"media\voice3\moveToNext2.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class moveToObj1 {
+		name = "moveToObj1";
+		sound[] = {"media\voice3\moveToObj1.ogg", db+15, 1};
+		titles[] = {};
+	};
+	class point1Taken {
+		name = "point1Taken";
+		sound[] = {"media\voice3\point1Taken.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class point2Taken {
+		name = "point2Taken";
+		sound[] = {"media\voice3\point2Taken.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class point3Taken {
+		name = "point3Taken";
+		sound[] = {"media\voice3\point3Taken.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class point4Taken {
+		name = "point4Taken";
+		sound[] = {"media\voice3\point4Taken.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class missionFailed {
+		name = "missionFailed";
+		sound[] = {"media\voice3\missionFailed.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class objwonback {
+		name = "objwonback";
+		sound[] = {"media\voice3\objwonback.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class objlostcontrol {
+		name = "objlostcontrol";
+		sound[] = {"media\voice3\objlostcontrol.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class win {
+		name = "win";
+		sound[] = {"media\voice3\win.ogg", db+12, 1};
+		titles[] = {};
+	};
+	class win2 {
+		name = "win2";
+		sound[] = {"media\voice3\win2.ogg", db+12, 1};
+		titles[] = {};
+	};
+
+	class info {
+		sound[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hint",0.891251,1};
+		titles[] = {};
+	};
+	class valk {
+		name = "valk";
+		sound[] = {"media\music\valk2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class commandOut {
+		name = "commandOut";
+		sound[] = {"media\voice\commandOut.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class leavingFOB1 {
+		name = "leavingFOB1";
+		sound[] = {"media\voice\leavingFOB1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class leavingFOB2 {
+		name = "leavingFOB2";
+		sound[] = {"media\voice\leavingFOB2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class opforNeutralised1 {
+		name = "opforNeutralised1";
+		sound[] = {"media\voice\opforNeutralised1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class opforNeutralised2 {
+		name = "opforNeutralised2";
+		sound[] = {"media\voice\opforNeutralised2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class patrolMoving1 {
+		name = "patrolMoving1";
+		sound[] = {"media\voice\patrolMoving1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class patrolMoving2 {
+		name = "patrolMoving2";
+		sound[] = {"media\voice\patrolMoving2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class patrolNowLive1 {
+		name = "patrolNowLive1";
+		sound[] = {"media\voice\patrolNowLive1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class patrolNowLive2 {
+		name = "patrolNowLive2";
+		sound[] = {"media\voice\patrolNowLive2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class pointTakenPrepare1 {
+		name = "pointTakenPrepare1";
+		sound[] = {"media\voice\pointTakenPrepare1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class pointTakenPrepare2 {
+		name = "pointTakenPrepare2";
+		sound[] = {"media\voice\pointTakenPrepare2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class pointTakenPrepare3 {
+		name = "pointTakenPrepare3";
+		sound[] = {"media\voice\pointTakenPrepare3.ogg", 3000, 1};
+		titles[] = {};
+	};
+	class RFInbound {
+		name = "RFInbound";
+		sound[] = {"media\voice\RFInbound.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class thisIsCommand1 {
+		name = "thisIsCommand1";
+		sound[] = {"media\voice\thisIsCommand1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class thisIsCommand2 {
+		name = "thisIsCommand2";
+		sound[] = {"media\voice\thisIsCommand2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class thisIsCommand3 {
+		name = "thisIsCommand3";
+		sound[] = {"media\voice\thisIscommand3.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class welcome1 {
+		name = "welcome1";
+		sound[] = {"media\voice\welcome1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class welcome2 {
+		name = "welcome2";
+		sound[] = {"media\voice\welcome2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class enemyAtGrid {
+		name = "enemyAtGrid";
+		sound[] = {"media\voice\enemyAtGrid.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num0 {
+		name = "num0";
+		sound[] = {"media\voice\newnew0.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num1 {
+		name = "num1";
+		sound[] = {"media\voice\newnew1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num2 {
+		name = "num2";
+		sound[] = {"media\voice\newnew2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num3 {
+		name = "num3";
+		sound[] = {"media\voice\newnew3.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num4 {
+		name = "num4";
+		sound[] = {"media\voice\newnew4.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num5 {
+		name = "num5";
+		sound[] = {"media\voice\newnew5.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num6 {
+		name = "num6";
+		sound[] = {"media\voice\newnew6.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num7 {
+		name = "num7";
+		sound[] = {"media\voice\newnew7.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num8 {
+		name = "num8";
+		sound[] = {"media\voice\newnew8.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num9 {
+		name = "num9";
+		sound[] = {"media\voice\newnew9.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	// class squelch {
+	// 	name = "squelch";
+	// 	sound[] = {"media\voice2\squelch.ogg", db + 0, 1};
+	// 	titles[] = {};
+	// };
+	class attack {
+		name = "attack";
+		sound[] = {"media\voice2\attack.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class hold {
+		name = "hold";
+		sound[] = {"media\voice2\hold.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class fallback {
+		name = "fallback";
+		sound[] = {"media\voice2\fallback.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class fallbackremain {
+		name = "fallbackremain";
+		sound[] = {"media\voice2\fallbackremain.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class jungle1 {
+		name = "jungle1";
+		sound[] = {"media\jungle\jungle1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night1 {
+		name = "night1";
+		sound[] = {"media\jungleNight\night1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night2 {
+		name = "night2";
+		sound[] = {"media\jungleNight\night2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night3 {
+		name = "night3";
+		sound[] = {"media\jungleNight\night3.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night4 {
+		name = "night4";
+		sound[] = {"media\jungleNight\night4.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night5 {
+		name = "night5";
+		sound[] = {"media\jungleNight\night5.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night6 {
+		name = "night6";
+		sound[] = {"media\jungleNight\night6.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night7 {
+		name = "night7";
+		sound[] = {"media\jungleNight\night7.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night8 {
+		name = "night8";
+		sound[] = {"media\jungleNight\night8.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night9 {
+		name = "night9";
+		sound[] = {"media\jungleNight\night9.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night10 {
+		name = "night10";
+		sound[] = {"media\jungleNight\night10.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night11 {
+		name = "night11";
+		sound[] = {"media\jungleNight\night11.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night12 {
+		name = "night12";
+		sound[] = {"media\jungleNight\night12.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night13 {
+		name = "night13";
+		sound[] = {"media\jungleNight\night13.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night14 {
+		name = "night14";
+		sound[] = {"media\jungleNight\night14.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night15 {
+		name = "night15";
+		sound[] = {"media\jungleNight\night15.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night16 {
+		name = "night16";
+		sound[] = {"media\jungleNight\night16.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night17 {
+		name = "night17";
+		sound[] = {"media\jungleNight\night17.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night18 {
+		name = "night18";
+		sound[] = {"media\jungleNight\night18.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night19 {
+		name = "night19";
+		sound[] = {"media\jungleNight\night19.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night20 {
+		name = "night20";
+		sound[] = {"media\jungleNight\night20.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night21 {
+		name = "night21";
+		sound[] = {"media\jungleNight\night21.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 1oc {
+		name = "1oc";
+		sound[] = {"media\wayfinder\1OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 2oc {
+		name = "2oc";
+		sound[] = {"media\wayfinder\2OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 3oc {
+		name = "3oc";
+		sound[] = {"media\wayfinder\3OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 4oc {
+		name = "4oc";
+		sound[] = {"media\wayfinder\4OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 5oc {
+		name = "5oc";
+		sound[] = {"media\wayfinder\5OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 6oc {
+		name = "6oc";
+		sound[] = {"media\wayfinder\6OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 7oc {
+		name = "7oc";
+		sound[] = {"media\wayfinder\7OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 8oc {
+		name = "8oc";
+		sound[] = {"media\wayfinder\8OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 9oc {
+		name = "9oc";
+		sound[] = {"media\wayfinder\9OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 10oc {
+		name = "10oc";
+		sound[] = {"media\wayfinder\10OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 11oc {
+		name = "11oc";
+		sound[] = {"media\wayfinder\11OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 12oc {
+		name = "12oc";
+		sound[] = {"media\wayfinder\12OC.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class distance {
+		name = "distance";
+		sound[] = {"media\wayfinder\distance.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n0 {
+		name = "n0";
+		sound[] = {"media\wayfinder\num0.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n1 {
+		name = "n1";
+		sound[] = {"media\wayfinder\num1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n2 {
+		name = "n2";
+		sound[] = {"media\wayfinder\num2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n3 {
+		name = "n3";
+		sound[] = {"media\wayfinder\num3.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n4 {
+		name = "n4";
+		sound[] = {"media\wayfinder\num4.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n5 {
+		name = "n5";
+		sound[] = {"media\wayfinder\num5.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n6 {
+		name = "n6";
+		sound[] = {"media\wayfinder\num6.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n7 {
+		name = "n7";
+		sound[] = {"media\wayfinder\num7.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n8 {
+		name = "n8";
+		sound[] = {"media\wayfinder\num8.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class n9 {
+		name = "n9";
+		sound[] = {"media\wayfinder\num9.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class plotted {
+		name = "plotted";
+		sound[] = {"media\wayfinder\plotted.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class standby {
+		name = "standby";
+		sound[] = {"media\wayfinder\standby.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class adjL {
+		name = "adjL";
+		sound[] = {"media\wayDist\adjL.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class adjR {
+		name = "adjR";
+		sound[] = {"media\wayDist\adjR.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class currentH {
+		name = "currentH";
+		sound[] = {"media\wayDist\currentH.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d1halfkm {
+		name = "d1halfkm";
+		sound[] = {"media\wayDist\d1halfkm.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d1km {
+		name = "d1km";
+		sound[] = {"media\wayDist\d1km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d2halfkm {
+		name = "d2halfkm";
+		sound[] = {"media\wayDist\d2halfkm.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d2km {
+		name = "d2km";
+		sound[] = {"media\wayDist\d2km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d3km {
+		name = "d3km";
+		sound[] = {"media\wayDist\d3km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d4km {
+		name = "d4km";
+		sound[] = {"media\wayDist\d4km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d5km {
+		name = "d5km";
+		sound[] = {"media\wayDist\d5km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d6km {
+		name = "d6km";
+		sound[] = {"media\wayDist\d6km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d7km {
+		name = "d7km";
+		sound[] = {"media\wayDist\d7km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d8km {
+		name = "d8km";
+		sound[] = {"media\wayDist\d8km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d9km {
+		name = "d9km";
+		sound[] = {"media\wayDist\d9km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d10km {
+		name = "d10km";
+		sound[] = {"media\wayDist\d10km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d12km {
+		name = "d12km";
+		sound[] = {"media\wayDist\d12km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d14km {
+		name = "d14km";
+		sound[] = {"media\wayDist\d14km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d16km {
+		name = "d16km";
+		sound[] = {"media\wayDist\d16km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d18km {
+		name = "d18km";
+		sound[] = {"media\wayDist\d18km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d20km {
+		name = "d20km";
+		sound[] = {"media\wayDist\d20km.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d20m {
+		name = "d20m";
+		sound[] = {"media\wayDist\d20m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d40m {
+		name = "d40m";
+		sound[] = {"media\wayDist\d40m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d60m {
+		name = "d60m";
+		sound[] = {"media\wayDist\d60m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d80m {
+		name = "d80m";
+		sound[] = {"media\wayDist\d80m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d100m {
+		name = "d100m";
+		sound[] = {"media\wayDist\d100m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d120m {
+		name = "d120m";
+		sound[] = {"media\wayDist\d120m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d150m {
+		name = "d150m";
+		sound[] = {"media\wayDist\d150m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d170m {
+		name = "d170m";
+		sound[] = {"media\wayDist\d170m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d200m {
+		name = "d200m";
+		sound[] = {"media\wayDist\d200m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d250m {
+		name = "d250m";
+		sound[] = {"media\wayDist\d250m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d300m {
+		name = "d300m";
+		sound[] = {"media\wayDist\d300m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d350m {
+		name = "d350m";
+		sound[] = {"media\wayDist\d350m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d400m {
+		name = "d400m";
+		sound[] = {"media\wayDist\d400m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d450m {
+		name = "d450m";
+		sound[] = {"media\wayDist\d450m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d500m {
+		name = "d500m";
+		sound[] = {"media\wayDist\d500m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d600m {
+		name = "d600m";
+		sound[] = {"media\wayDist\d600m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d700m {
+		name = "d700m";
+		sound[] = {"media\wayDist\d700m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d800m {
+		name = "d800m";
+		sound[] = {"media\wayDist\d800m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class d900m {
+		name = "d900m";
+		sound[] = {"media\wayDist\d900m.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class dLongWay {
+		name = "dLongWay";
+		sound[] = {"media\wayDist\dLongWay.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class dUnder20 {
+		name = "dUnder20";
+		sound[] = {"media\wayDist\dUnder20.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class squelch {
+		name = "squelch";
+		sound[] = {"media\wayDist\squelch.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class targetH {
+		name = "targetH";
+		sound[] = {"media\wayDist\targetH.ogg", db + 0, 1};
+		titles[] = {};
+	};
+
+	class Left01 {
+		name = "Left01";
+		sound[] = {"media\wayF_adj\Left01.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left02 {
+		name = "Left02";
+		sound[] = {"media\wayF_adj\Left02.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left03 {
+		name = "Left03";
+		sound[] = {"media\wayF_adj\Left03.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left04 {
+		name = "Left04";
+		sound[] = {"media\wayF_adj\Left04.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left05 {
+		name = "Left05";
+		sound[] = {"media\wayF_adj\Left05.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left06 {
+		name = "Left06";
+		sound[] = {"media\wayF_adj\Left06.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left07 {
+		name = "Left07";
+		sound[] = {"media\wayF_adj\Left07.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left08 {
+		name = "Left08";
+		sound[] = {"media\wayF_adj\Left08.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left09 {
+		name = "Left09";
+		sound[] = {"media\wayF_adj\Left09.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left10 {
+		name = "Left10";
+		sound[] = {"media\wayF_adj\Left10.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left11 {
+		name = "Left11";
+		sound[] = {"media\wayF_adj\Left11.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left12 {
+		name = "Left12";
+		sound[] = {"media\wayF_adj\Left12.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left13 {
+		name = "Left13";
+		sound[] = {"media\wayF_adj\Left13.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left14 {
+		name = "Left14";
+		sound[] = {"media\wayF_adj\Left14.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left15 {
+		name = "Left15";
+		sound[] = {"media\wayF_adj\Left15.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left16 {
+		name = "Left16";
+		sound[] = {"media\wayF_adj\Left16.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left17 {
+		name = "Left17";
+		sound[] = {"media\wayF_adj\Left17.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left18 {
+		name = "Left18";
+		sound[] = {"media\wayF_adj\Left18.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left19 {
+		name = "Left19";
+		sound[] = {"media\wayF_adj\Left19.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Left20 {
+		name = "Left20";
+		sound[] = {"media\wayF_adj\Left20.ogg", db + 0, 1};
+		titles[] = {};
+	};
+
+	class Right01 {
+		name = "Right01";
+		sound[] = {"media\wayF_adj\Right01.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right02 {
+		name = "Right02";
+		sound[] = {"media\wayF_adj\Right02.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right03 {
+		name = "Right03";
+		sound[] = {"media\wayF_adj\Right03.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right04 {
+		name = "Right04";
+		sound[] = {"media\wayF_adj\Right04.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right05 {
+		name = "Right05";
+		sound[] = {"media\wayF_adj\Right05.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right06 {
+		name = "Right06";
+		sound[] = {"media\wayF_adj\Right06.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right07 {
+		name = "Right07";
+		sound[] = {"media\wayF_adj\Right07.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right08 {
+		name = "Right08";
+		sound[] = {"media\wayF_adj\Right08.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right09 {
+		name = "Right09";
+		sound[] = {"media\wayF_adj\Right09.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right10 {
+		name = "Right10";
+		sound[] = {"media\wayF_adj\Right10.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right11 {
+		name = "Right11";
+		sound[] = {"media\wayF_adj\Right11.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right12 {
+		name = "Right12";
+		sound[] = {"media\wayF_adj\Right12.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right13 {
+		name = "Right13";
+		sound[] = {"media\wayF_adj\Right13.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right14 {
+		name = "Right14";
+		sound[] = {"media\wayF_adj\Right14.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right15 {
+		name = "Right15";
+		sound[] = {"media\wayF_adj\Right15.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right16 {
+		name = "Right16";
+		sound[] = {"media\wayF_adj\Right16.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right17 {
+		name = "Right17";
+		sound[] = {"media\wayF_adj\Right17.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right18 {
+		name = "Right18";
+		sound[] = {"media\wayF_adj\Right18.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right19 {
+		name = "Right19";
+		sound[] = {"media\wayF_adj\Right19.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class Right20 {
+		name = "Right20";
+		sound[] = {"media\wayF_adj\Right20.ogg", db + 0, 1};
+		titles[] = {};
+	};
+
+};
+
