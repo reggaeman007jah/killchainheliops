@@ -22,6 +22,12 @@ for "_i" from 1 to (selectRandom [4,5,6]) do {
 	{
 		_unit removeItems _x
 	} forEach ["vn_b_item_firstaidkit","vn_o_item_firstaidkit","FirstAidKit","Medikit","vn_b_item_medikit_01"];
+
+	_mags = magazines _unit;
+	{
+		_unit removeMagazineGlobal _x; // to prevent them from enagaging, and makes them board quicker 
+	} forEach _mags;
+
 	// {
 	// 	_unit removeItems _x
 	// } forEach ["vn_b_item_firstaidkit","vn_o_item_firstaidkit","FirstAidKit","Medikit","vn_b_item_medikit_01"];
@@ -44,3 +50,6 @@ for "_i" from 1 to (selectRandom [4,5,6]) do {
 	// _x setDamage 0.9;	
 	[_x] spawn RGGo_fnc_order_autoBoard; 
 } forEach _toBoard;
+
+// ["_anchor", "_minEnemy", "_maxEnemy", "_minDist", "_maxDist", "_playerProxTrig", "_moveIn", "_grouped"] RGGs_fnc_spawn_hotLZ;
+[_extractPos, 10, 20, 100, 120, 50, false, false] spawn RGGs_fnc_spawn_hotLZ;
