@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=130;
+		nextID=135;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10984.29,116.09325,2988.5493};
-		dir[]={-0.83577216,-0.52282798,-0.16773792};
-		up[]={-0.5126062,0.85243821,-0.10287911};
-		aside[]={-0.19677429,-7.4505806e-009,0.98044896};
+		pos[]={10990.266,143.46428,3071.5793};
+		dir[]={-0.84239244,-0.46016562,-0.28039753};
+		up[]={-0.43661365,0.88783312,-0.14533059};
+		aside[]={-0.31582236,0,0.94881845};
 	};
 };
 binarizationWanted=0;
@@ -27,6 +27,7 @@ sourceName="killchainHeliOps";
 addons[]=
 {
 	"characters_f_vietnam_c",
+	"characters_f_vietnam_04_c",
 	"A3_Ui_F",
 	"weapons_f_vietnam_c",
 	"air_f_vietnam_c",
@@ -39,7 +40,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			className="characters_f_vietnam_c";
@@ -49,47 +50,54 @@ class AddonsMetaData
 		};
 		class Item1
 		{
+			className="characters_f_vietnam_04_c";
+			name="characters_f_vietnam_04_c";
+			author="Savage Game Design";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item3
 		{
 			className="weapons_f_vietnam_c";
 			name="weapons_f_vietnam_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
-		class Item3
+		class Item4
 		{
 			className="air_f_vietnam_c";
 			name="air_f_vietnam_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item5
 		{
 			className="air_f_vietnam_02_c";
 			name="air_f_vietnam_02_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item6
 		{
 			className="objects_f_vietnam_c";
 			name="objects_f_vietnam_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item7
 		{
 			className="wheeled_f_vietnam_03_c";
 			name="wheeled_f_vietnam_03_c";
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item8
 		{
 			className="wheeled_f_vietnam_c";
 			name="wheeled_f_vietnam_c";
@@ -243,14 +251,14 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=1;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
 						position[]={10938.696,98.521439,3056.2551};
-						angles[]={0,4.7168221,0};
+						angles[]={0,4.7070656,0};
 					};
 					side="West";
 					flags=7;
@@ -266,6 +274,19 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -277,7 +298,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -290,7 +311,183 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10938.532,98.521431,3058.1953};
+						angles[]={0,4.7070656,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=132;
+					type="vn_b_men_aircrew_46";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10938.532,98.521431,3058.1953};
+						angles[]={0,4.7070656,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=133;
+					type="vn_b_men_aircrew_08";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male05ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10942.104,98.481445,3053.781};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=134;
+					type="vn_b_men_aircrew_48";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -301,11 +498,11 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=1;
+					nextID=4;
 				};
 				class Links
 				{
-					items=1;
+					items=4;
 					class Item0
 					{
 						linkID=0;
@@ -316,10 +513,42 @@ class Mission
 							role=1;
 						};
 					};
+					class Item1
+					{
+						linkID=1;
+						item0=132;
+						item1=113;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=133;
+						item1=113;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=134;
+						item1=113;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
 				};
 			};
 			id=7;
-			atlOffset=1.5258789e-005;
 		};
 		class Item1
 		{
@@ -1366,7 +1595,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10938.696,101.33814,3056.2051};
+				position[]={10937.643,101.33813,3056.55};
 				angles[]={0,4.7070656,0};
 			};
 			side="West";
@@ -1377,7 +1606,6 @@ class Mission
 			};
 			id=113;
 			type="vn_b_air_uh1d_02_04";
-			atlOffset=1.5258789e-005;
 		};
 		class Item26
 		{

@@ -6,7 +6,7 @@ class CfgFunctions {
 	// #include "functions_Find\functions_Find.hpp"
 	#include "functions_Get\functions_Get.hpp"
 	#include "functions_Heli\functions_Heli.hpp"
-	// #include "functions_Information\functions_Information.hpp"
+	#include "functions_Information\functions_Information.hpp"
 	#include "functions_Missions\functions_Missions.hpp"
 	#include "functions_Order\functions_Order.hpp"
 	// #include "functions_Patrol\functions_Patrol.hpp"
@@ -15,7 +15,7 @@ class CfgFunctions {
 	// #include "functions_Test\functions_Test.hpp"
 	// #include "functions_Tactical\functions_Tactical.hpp"
 	// #include "functions_Utilities\functions_Utilities.hpp"
-	// #include "functions_Wayfinder\functions_Wayfinder.hpp"
+	#include "functions_Wayfinder\functions_Wayfinder.hpp"
 };
 
 // #include "dialogs\textDisplays.hpp"

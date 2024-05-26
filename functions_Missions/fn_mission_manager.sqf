@@ -10,6 +10,8 @@ _lzRefStr = str _lzRef;
 _marker = "lz" + _lzRefStr;
 _target = getMarkerPos _marker;
 
+RGG_currentObj = _target;
+
 _missionType = selectRandom ["MEDIVAC"];
 _currentHeat = selectRandom ["COLD"];
 [_target, 3000, _lzRefStr, _missionType, _currentHeat] spawn RGGm_fnc_mission_extractInjured; // only mission we have rn 

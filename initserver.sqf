@@ -2,6 +2,12 @@
 sleep 5;
 [] spawn RGGm_fnc_mission_manager;
 
+RGG_medBase = [9197,6322];
+RGG_currentObj = [0,0];
+
+
+
+
 // RGG_MISSIONLIVE = false;
 
 // [[4685.11,3682.24,0], RGGm_fnc_mission_extractInjured] spawn RGGm_fnc_mission_proxCheck;
