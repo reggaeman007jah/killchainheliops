@@ -7,7 +7,7 @@ class RGGw {
 		class wayF_adj {
 			Description = "This function will deliver one-shot adjustment readout to mission objective";
 		};
-		class wayF_adj {
+		class wayF_adjBase {
 			Description = "This function will deliver one-shot adjustment readout to main FOB";
 		};
 		class wayF_lzAlt {
