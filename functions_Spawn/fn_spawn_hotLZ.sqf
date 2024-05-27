@@ -17,6 +17,7 @@ _grouped: true or false - if true they will be grouped closeby as a unit, if fal
 params ["_anchor", "_minEnemy", "_maxEnemy", "_minDist", "_maxDist", "_playerProxTrig", "_moveIn", "_grouped"];
 
 // run setCapArea on any existing units 
+systemChat "running RGGe_fnc_effects_setCaptiveArea: true";
 [_anchor, 500, true] call RGGe_fnc_effects_setCaptiveArea;
 
 _opfor = [];
@@ -59,6 +60,7 @@ while {_checkCycle} do {
 } forEach _opfor;
 
 [_anchor, 500, false] call RGGe_fnc_effects_setCaptiveArea;
+systemChat "running RGGe_fnc_effects_setCaptiveArea: false";
 
 // if (_moveIn) then {
 // 	// send them into the anchor point 

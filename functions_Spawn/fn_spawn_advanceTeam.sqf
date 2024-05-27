@@ -7,13 +7,16 @@ Author: Reggs
 
 params ["_spawnPoint", "_trigDist"];
 
+systemChat "spawning in advance team";
+
 for "_i" from 1 to (10 + (random 20)) do {
 	_grp = createGroup [independent, true];
 	_class = [] call RGGg_fnc_get_randomArmyClassname;  
 	_dir = random 359;
-	_pos = _spawnPoint getPos [(120 + (random 20)), _dir];
+	_pos = _spawnPoint getPos [(60 + (random 60)), _dir];
 	_unit = _grp createUnit [_class, _pos, [], 1, "none"]; 
 	_unit setUnitPos "MIDDLE";
+	_unit setCaptive true;
 	{
 		_x addCuratorEditableObjects [[_unit], false];
 	} forEach allCurators;

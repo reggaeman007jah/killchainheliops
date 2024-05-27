@@ -1,6 +1,8 @@
 /*
 Note: Make sure to check height before running - if heli is on ground, or rather speed is very slow, then always give theb OC 
 The adjust left/right only makes sense when moving 
+
+Note: Make sure this only runs if the player is in the heli 
 */
 
 systemChat "DEBUG - running f_wayF_adj";
@@ -29,7 +31,7 @@ _target = floor (_heli getDir _pos);
 _coP say3D ["squelch", _loud, 1, true]; sleep 0.3;
 switch (true) do {
 	case (_rel == 0): { 
-		systemChat format ["Debug - Do not adjust, Target is dead ahead at %1 degrees", _rel]; 
+		systemChat format ["Debug - Do not adjust, Target is dead ahead at %1 degrees", _rel]; // needs sound for this
 	};
 	case (_rel >= 340): { 
 		systemChat "DEBUG - _rel heading must be between 340 and 359";

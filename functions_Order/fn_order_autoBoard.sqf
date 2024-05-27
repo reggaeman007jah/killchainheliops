@@ -5,7 +5,7 @@ Purpose: Orders given AI unit to auto-board any heli nearby
 Author: Reggs
 
 Notes:
-If there are 3 units to be picked up, each unit will have this process running, to ensure each unit (which is in their own group) will take 
+If there are, say, 3 units to be picked up, each unit will have this process running, to ensure each unit (which is in their own group) will take 
 decisions independent of others, and always go to the nearest heli - which is important as this is an MP experience, ie pickup scripts must work 
 in MP, without bugs!!
 
@@ -23,6 +23,7 @@ but when moving to heli, have another check running, so if that chosen heli leav
 */
 
 _name = str _unitToBoard;
+systemChat format ["Creating Marker: %1", _name];
 _objective1 = createMarker [_name, (getPos _unitToBoard)];
 _objective1 setMarkerShape "ELLIPSE";
 _objective1 setMarkerColor "ColorBlue";
@@ -54,6 +55,7 @@ while {_check1} do {
 						systemChat format ["DEBUG - pushing back %1 heli", _x];
 						_check1 = false;
 						deleteMarker _name;
+						systemChat format ["Deleting Marker: %1", _name];
 					};
 				};
 			};

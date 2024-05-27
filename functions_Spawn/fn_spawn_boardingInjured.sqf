@@ -18,7 +18,7 @@ for "_i" from 1 to (selectRandom [4,5,6]) do {
 	_pos = _extractPos getPos [(random 15), (random 359)];
 	_unit = _indiGroup createUnit [_class, _pos, [], 0.1, "none"]; 
 	_toBoard pushBack _unit;
-	// _unit removeItems "vn_b_item_firstaidkit";
+
 	{
 		_unit removeItems _x
 	} forEach ["vn_b_item_firstaidkit","vn_o_item_firstaidkit","FirstAidKit","Medikit","vn_b_item_medikit_01"];
@@ -28,12 +28,7 @@ for "_i" from 1 to (selectRandom [4,5,6]) do {
 		_unit removeMagazineGlobal _x; // to prevent them from enagaging, and makes them board quicker 
 	} forEach _mags;
 
-	// {
-	// 	_unit removeItems _x
-	// } forEach ["vn_b_item_firstaidkit","vn_o_item_firstaidkit","FirstAidKit","Medikit","vn_b_item_medikit_01"];
-	// {
-	// 	_unit removeItems _x
-	// } forEach ["vn_b_item_firstaidkit","vn_o_item_firstaidkit","FirstAidKit","Medikit","vn_b_item_medikit_01"];
+
 	_unit setDamage (selectRandom [0.7, 0.8, 0.9]);
 	_unit setUnitPos (selectRandom ["middle"]);
 	sleep 0.3;
@@ -47,9 +42,8 @@ for "_i" from 1 to (selectRandom [4,5,6]) do {
 // this next FNC is run on each unit individually, to manage the fact that multiple helis / players may be picking up .. 
 // so each unit has to behave independently of the others
 {
-	// _x setDamage 0.9;	
 	[_x] spawn RGGo_fnc_order_autoBoard; 
 } forEach _toBoard;
 
 // ["_anchor", "_minEnemy", "_maxEnemy", "_minDist", "_maxDist", "_playerProxTrig", "_moveIn", "_grouped"] RGGs_fnc_spawn_hotLZ;
-[_extractPos, 10, 20, 100, 120, 50, false, false] spawn RGGs_fnc_spawn_hotLZ;
+[_extractPos, 10, 20, 100, 120, 10, false, false] spawn RGGs_fnc_spawn_hotLZ; // make random 
