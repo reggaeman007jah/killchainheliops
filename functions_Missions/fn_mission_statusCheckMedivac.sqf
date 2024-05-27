@@ -33,6 +33,8 @@ while {_check} do {
 	} else {
 		// units are still in the AO! - remove this when happy 
 		systemChat format ["DEBUG - statusCheckMedivac - Cannot delete_allWithinArea, as injured units are still near to the extract pos: %1", _extractPos];
+		// make them move to LZ 
+		// adjust health? 
 	};
 
 	// add timelimit check, to generate a failstate 

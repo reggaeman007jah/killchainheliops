@@ -34,7 +34,7 @@ for "_i" from 1 to (selectRandom [4,5,6]) do {
 	// {
 	// 	_unit removeItems _x
 	// } forEach ["vn_b_item_firstaidkit","vn_o_item_firstaidkit","FirstAidKit","Medikit","vn_b_item_medikit_01"];
-	_unit setDamage 0.9;
+	_unit setDamage (selectRandom [0.7, 0.8, 0.9]);
 	_unit setUnitPos (selectRandom ["middle"]);
 	sleep 0.3;
 };

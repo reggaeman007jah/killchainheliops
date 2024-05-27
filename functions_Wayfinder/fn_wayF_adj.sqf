@@ -1,5 +1,6 @@
 /*
-
+Note: Make sure to check height before running - if heli is on ground, or rather speed is very slow, then always give theb OC 
+The adjust left/right only makes sense when moving 
 */
 
 systemChat "DEBUG - running f_wayF_adj";
@@ -10,7 +11,8 @@ private _fnc_getCoPilots = {
 	_copilots;
 };
 
-_marker = str player;  
+// _marker = str player;  
+
 _player = player; 
 _pos = RGG_currentObj;  
 _heli = vehicle _player;  
@@ -85,7 +87,6 @@ switch (true) do {
 		};		
 	};
 	default { 
-
 		switch (true) do {
 			case ((_rel > 345) or (_rel <= 15)):   	{ _coP say3D ["12OC", _loud, 1, true] }; 
 			case ((_rel > 15)  && (_rel <= 45)):   	{ _coP say3D ["1OC", _loud, 1, true] }; 

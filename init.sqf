@@ -31,5 +31,5 @@ enableEnvironment [false, true];
 // ["Operation Killchain - Aviation","wayfinderOneshot", "one-off wayfinder request - full", {_this spawn RGGi_fnc_information_wayfinderOneshot}, ""] call CBA_fnc_addKeybind;
 // ["Operation Killchain - Aviation","wayfinderOneshotAdj", "one-off wayfinder adjust request", {_this spawn RGGi_fnc_information_wayfinderAdj}, ""] call CBA_fnc_addKeybind;
 // ["Operation Killchain - Aviation","wayfinderOneshotDist", "one-off wayfinder distance request", {_this spawn RGGi_fnc_information_wayfinderDist}, ""] call CBA_fnc_addKeybind;
-["Operation Killchain - Aviation", "wayfinderAdj", "Mission Course Direction", {_this spawn RGGw_fnc_wayF_adj}, ""] call CBA_fnc_addKeybind;
-["Operation Killchain - Aviation", "wayfinderAdj", "Base Direction", {_this spawn RGGw_fnc_wayF_adjBase}, ""] call CBA_fnc_addKeybind;
+["Operation Killchain - Aviation", "wayfinderAdjLZ", "Mission Course Direction", {_this spawn RGGw_fnc_wayF_adj}, ""] call CBA_fnc_addKeybind;
+["Operation Killchain - Aviation", "wayfinderAdjBase", "Base Direction", {_this spawn RGGw_fnc_wayF_adjBase}, ""] call CBA_fnc_addKeybind;

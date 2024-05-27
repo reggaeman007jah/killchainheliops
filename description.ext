@@ -525,6 +525,66 @@ class CfgSounds {
 		sound[] = {"media\wayfinder\12OC.ogg", db + 0, 1};
 		titles[] = {};
 	};
+	class 1ocbase {
+		name = "1ocbase";
+		sound[] = {"media\wayfinder\Path1oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 2ocbase {
+		name = "2ocbase";
+		sound[] = {"media\wayfinder\Path2oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 3ocbase {
+		name = "3ocbase";
+		sound[] = {"media\wayfinder\Path3oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 4ocbase {
+		name = "4ocbase";
+		sound[] = {"media\wayfinder\Path4oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 5ocbase {
+		name = "5ocbase";
+		sound[] = {"media\wayfinder\Path5oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 6ocbase {
+		name = "6ocbase";
+		sound[] = {"media\wayfinder\Path6oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 7ocbase {
+		name = "7ocbase";
+		sound[] = {"media\wayfinder\Path7oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 8ocbase {
+		name = "8ocbase";
+		sound[] = {"media\wayfinder\Path8oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 9ocbase {
+		name = "9ocbase";
+		sound[] = {"media\wayfinder\Path9oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 10ocbase {
+		name = "10ocbase";
+		sound[] = {"media\wayfinder\Path10oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 11ocbase {
+		name = "11ocbase";
+		sound[] = {"media\wayfinder\Path11oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class 12ocbase {
+		name = "12ocbase";
+		sound[] = {"media\wayfinder\Path12oc.ogg", db + 0, 1};
+		titles[] = {};
+	};
 	class distance {
 		name = "distance";
 		sound[] = {"media\wayfinder\distance.ogg", db + 0, 1};
