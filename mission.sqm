@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10990.266,143.46428,3071.5793};
+		pos[]={10998.024,151.93541,3070.8977};
 		dir[]={-0.84239244,-0.46016559,-0.28039753};
 		up[]={-0.43661362,0.88783312,-0.14533058};
 		aside[]={-0.31582236,-7.4505806e-009,0.94881845};
@@ -1157,7 +1157,7 @@ class Mission
 			dataType="Marker";
 			position[]={9035.5586,44.525002,1892.316};
 			name="lz1";
-			text="lz1";
+			text="LZ Alpha";
 			type="hd_pickup";
 			id=31;
 			atlOffset=0.0001449585;
@@ -1167,7 +1167,7 @@ class Mission
 			dataType="Marker";
 			position[]={7845.1279,63.198002,2407.6289};
 			name="lz2";
-			text="lz2";
+			text="LZ Bravo";
 			type="hd_pickup";
 			id=32;
 			atlOffset=0.0004234314;
@@ -1177,7 +1177,7 @@ class Mission
 			dataType="Marker";
 			position[]={7493.7271,129.74001,5465.1841};
 			name="lz3";
-			text="lz3";
+			text="LZ Charlie";
 			type="hd_pickup";
 			id=33;
 		};
@@ -1186,7 +1186,7 @@ class Mission
 			dataType="Marker";
 			position[]={5549.5498,198.976,6910.4668};
 			name="lz4";
-			text="lz4";
+			text="LZ Delta";
 			type="hd_pickup";
 			id=34;
 			atlOffset=0.00048828125;
@@ -1196,7 +1196,7 @@ class Mission
 			dataType="Marker";
 			position[]={4655.7578,29.091999,3627.6909};
 			name="lz5";
-			text="lz5";
+			text="LZ Echo";
 			type="hd_pickup";
 			id=35;
 			atlOffset=4.3869019e-005;
@@ -1630,7 +1630,7 @@ class Mission
 			dataType="Marker";
 			position[]={3815.21,271.254,5179.4219};
 			name="lz6";
-			text="lz6";
+			text="LZ Foxtrot";
 			type="hd_pickup";
 			id=116;
 			atlOffset=0.00039672852;
@@ -1640,7 +1640,7 @@ class Mission
 			dataType="Marker";
 			position[]={3374.467,223.37399,6146.019};
 			name="lz7";
-			text="lz7";
+			text="LZ Golf";
 			type="hd_pickup";
 			id=117;
 			atlOffset=0.00010681152;
@@ -1650,7 +1650,7 @@ class Mission
 			dataType="Marker";
 			position[]={5366.4219,257.66,6257.7139};
 			name="lz8";
-			text="lz8";
+			text="LZ Hotel";
 			type="hd_pickup";
 			id=118;
 			atlOffset=0.00036621094;
@@ -1660,7 +1660,7 @@ class Mission
 			dataType="Marker";
 			position[]={8862.6465,80.091003,4145.9868};
 			name="lz9";
-			text="lz9";
+			text="LZ India";
 			type="hd_pickup";
 			id=119;
 			atlOffset=0.00052642822;
@@ -1670,7 +1670,7 @@ class Mission
 			dataType="Marker";
 			position[]={6163.4751,203.545,4890.5278};
 			name="lz10";
-			text="lz10";
+			text="LZ Juliette";
 			type="hd_pickup";
 			id=120;
 			atlOffset=0.00015258789;

@@ -1068,5 +1068,157 @@ class CfgSounds {
 		titles[] = {};
 	};
 
+	// killchain command audio clips 
+	class thisIsKCCa {
+		name = "thisIsKCCa";
+		sound[] = {"media\killchainTasking\killchainCommand1.ogg", db + 2, 1};
+		titles[] = {};
+	};
+	class thisIsKCCb {
+		name = "thisIsKCCb";
+		sound[] = {"media\killchainTasking\killchainCommand2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class medivacTask {
+		name = "medivacTask";
+		sound[] = {"media\killchainTasking\killchainCommandMedicavTask.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class howCopy {
+		name = "howCopy";
+		sound[] = {"media\killchainTasking\killchainCommandHowCopy.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractAlpha {
+		name = "extractAlpha";
+		sound[] = {"media\killchainTasking\killchainCommandExtractAlpha.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractBravo {
+		name = "extractBravo";
+		sound[] = {"media\killchainTasking\killchainCommandExtractBravo.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractCharlie {
+		name = "extractCharlie";
+		sound[] = {"media\killchainTasking\killchainCommandExtractCharlie.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractDelta {
+		name = "extractDelta";
+		sound[] = {"media\killchainTasking\killchainCommandExtractDelta.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractEcho {
+		name = "extractEcho";
+		sound[] = {"media\killchainTasking\killchainCommandExtractEcho.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractFoxtrot {
+		name = "extractFoxtrot";
+		sound[] = {"media\killchainTasking\killchainCommandExtractFoxtrot.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractGolf {
+		name = "extractGolf";
+		sound[] = {"media\killchainTasking\killchainCommandExtractGolf.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractHotel {
+		name = "extractHotel";
+		sound[] = {"media\killchainTasking\killchainCommandExtractHotel.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractIndia {
+		name = "extractIndia";
+		sound[] = {"media\killchainTasking\killchainCommandExtractIndia.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractJuliette {
+		name = "extractJuliette";
+		sound[] = {"media\killchainTasking\killchainCommandExtractJuliette.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractKilo {
+		name = "extractKilo";
+		sound[] = {"media\killchainTasking\killchainCommandExtractKilo.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractLima {
+		name = "extractLima";
+		sound[] = {"media\killchainTasking\killchainCommandExtractLima.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractMike {
+		name = "extractMike";
+		sound[] = {"media\killchainTasking\killchainCommandExtractMike.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractNovember {
+		name = "extractNovember";
+		sound[] = {"media\killchainTasking\killchainCommandExtractNovember.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractOscar {
+		name = "extractOscar";
+		sound[] = {"media\killchainTasking\killchainCommandExtractOscar.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractPapa {
+		name = "extractPapa";
+		sound[] = {"media\killchainTasking\killchainCommandExtractPapa.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractQuebec {
+		name = "extractQuebec";
+		sound[] = {"media\killchainTasking\killchainCommandExtractQuebec.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractRomeo {
+		name = "extractRomeo";
+		sound[] = {"media\killchainTasking\killchainCommandExtractRomeo.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractSierra {
+		name = "extractSierra";
+		sound[] = {"media\killchainTasking\killchainCommandExtractSierra.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractTango {
+		name = "extractTango";
+		sound[] = {"media\killchainTasking\killchainCommandExtractTango.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractUniform {
+		name = "extractUniform";
+		sound[] = {"media\killchainTasking\killchainCommandExtractUniform.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractVictor {
+		name = "extractVictor";
+		sound[] = {"media\killchainTasking\killchainCommandExtractVictor.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractWhiskey {
+		name = "extractWhiskey";
+		sound[] = {"media\killchainTasking\killchainCommandExtractWhiskey.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractXray {
+		name = "extractXray";
+		sound[] = {"media\killchainTasking\killchainCommandExtractXray.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractYankee {
+		name = "extractYankee";
+		sound[] = {"media\killchainTasking\killchainCommandExtractYankee.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extractZulu {
+		name = "extractZulu";
+		sound[] = {"media\killchainTasking\killchainCommandExtractZulu.ogg", db + 0, 1};
+		titles[] = {};
+	};
+
 };
 

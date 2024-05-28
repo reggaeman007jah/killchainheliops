@@ -14,6 +14,6 @@ RGG_currentObj = _target;
 
 _missionType = selectRandom ["MEDIVAC"];
 _currentHeat = selectRandom ["COLD"];
-[_target, 3000, _lzRefStr, _missionType, _currentHeat] spawn RGGm_fnc_mission_extractInjured; // only mission we have rn 
+[_target, 3000, _lzRef, _missionType, _currentHeat] spawn RGGm_fnc_mission_extractInjured; // only mission we have rn 
 
 

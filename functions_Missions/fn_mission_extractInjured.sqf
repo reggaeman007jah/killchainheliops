@@ -6,12 +6,14 @@ Author: Reggs
 
 _extractPos: position of mission 
 _cycleLimit: not currently used 
-_lzRefStr: used for announcement to player 
+_lzRef: used for announcement to player 
 _missionType: used for announcement to player 
 _currentHeat: used for announcement to player 
 */
 
-params ["_extractPos", "_cycleLimit", "_lzRefStr", "_missionType", "_currentHeat"];
+params ["_extractPos", "_cycleLimit", "_lzRef", "_missionType"];
+
+systemChat "running FNC extractInjured";
 
 _proxCheck = true;
 while {_proxCheck} do {
@@ -27,7 +29,7 @@ while {_proxCheck} do {
 	if (_cnt == 0) then {
 		_proxCheck = false;
 		// systemChat "DEBUG - a new mission is generated as there are no players near to the selected mission position";
-		[_lzRefStr, _missionType, _currentHeat] call RGGm_fnc_mission_announcer;
+		[_lzRef, _missionType] call RGGm_fnc_mission_announcer;
 	} else {
 		systemChat "DEBUG - a new mission cannot be generated yet as there is at least one player too near to the selected position";
 	};
