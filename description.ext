@@ -1081,7 +1081,7 @@ class CfgSounds {
 	};
 	class medivacTask {
 		name = "medivacTask";
-		sound[] = {"media\killchainTasking\killchainCommandMedicavTask.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\killchainCommandMedivacTask.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class howCopy {

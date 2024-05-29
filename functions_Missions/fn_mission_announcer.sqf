@@ -15,7 +15,7 @@ params ["_lzRef", "_missionType"];
 
 systemChat "running FNC missionAnnouncer";
 
-
+// raptor this is killchain command 
 _num = selectRandom [1,2];
 if (_num == 1) then {
 	{ {playSound "thisIsKCCa"} remoteExec ["call", _x];} forEach allPlayers;
@@ -24,11 +24,12 @@ if (_num == 1) then {
 };
 
 
-sleep 3;
+sleep 5;
 
+// you have a medivac task
 { {playSound "medivacTask"} remoteExec ["call", _x];} forEach allPlayers;
 
-sleep 3;
+sleep 6;
 
 switch (_lzRef) do {
 	case 1: 	{ { {playSound "extractAlpha"} remoteExec ["call", _x];} forEach allPlayers; }; 
@@ -60,7 +61,7 @@ switch (_lzRef) do {
 	default 	{ systemChat "switch error left diff" };
 };
 
-sleep 3;
+sleep 2;
 
 { {playSound "howCopy"} remoteExec ["call", _x];} forEach allPlayers;
 
