@@ -2,6 +2,6 @@ Using elevenLabs for voices
 
 Killchain Command Voice: Chris 
 
-Copilot Voice: 
+Copilot Voice: Josh
 
 Patrol Voices:

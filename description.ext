@@ -1067,6 +1067,11 @@ class CfgSounds {
 		sound[] = {"media\wayF_adj\adjRight20.ogg", db + 0, 1};
 		titles[] = {};
 	};
+	class deadAhead {
+		name = "deadAhead";
+		sound[] = {"media\wayF_adj\LZdeadAhead.ogg", db + 0, 1};
+		titles[] = {};
+	};
 
 	// killchain command audio clips 
 	class thisIsKCCa {

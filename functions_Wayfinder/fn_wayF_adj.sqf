@@ -35,6 +35,7 @@ _target = floor (_heli getDir _pos);
 switch (true) do {
 	case (_rel == 0): { 
 		systemChat format ["Debug - Do not adjust, Target is dead ahead at %1 degrees", _rel]; // needs sound for this
+		{playSound "deadAhead"} remoteExec ["call", _player];
 	};
 	case (_rel >= 340): { 
 		systemChat "DEBUG - _rel heading must be between 340 and 359";
