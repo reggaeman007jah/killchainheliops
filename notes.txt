@@ -1,7 +1,69 @@
-Using elevenLabs for voices 
+Using following elevenLabs voices:
 
-Killchain Command Voice: Chris 
+Killchain Command Voice: Chris .. changed to Paul 
 
 Copilot Voice: Josh
 
-Patrol Voices:
+Patrol Voices: TBC
+
+a player can declare they are reqdy for tasking, as follows:
+
+Killchain Command this is Raptor 4 
+
+Raptor X Kilo Charlie go ahead 
+
+I can confirm Raptor 4 is ready for tasking, over 
+
+Copy that Raptor X - break 
+
+... a wait 
+
+player confirms being on station via keybind (ie spoken phrase)
+.. raptor 4 kilo charlie, (can be one of 6)
+.. you have a medivac task, 
+.. four units to extract, (can be 2 3 4 5 6)
+//.. standby for target LZ, break 
+// .. Raptor 4 kilo charlie, 
+.. extraction point is LZ Bravo 9, five patrols, 9 LZs per patrol, 45 LZs potential 
+kilo charlie out  
+
+each alphabet LZ sign can have 5 versions, Bravo 1, Bravo 2, Bravo 3 etc 
+
+Standard patrol callsigns 
+alpha patrol - LZs: LZ Alpha 1, 2 3 4 5 
+bravo patrol 
+charlie patrol 
+delta patrol 
+echo patrol 
+
+LRRP callsigns 
+Whiskey 
+x-ray 
+Yankee 
+Zulu 
+
+
+
+
+
+
+
+
+
+
+
+
+kilo charlie raptor 4 thats a good copy, out
+or 
+good copy kilo charlie, out  
+
+
+
+Player says 'This is Raptor (x) ready for tasking 
+We need 5 versions of this, to match the fact they could be in any of the raptors 
+The keybind sends the raptor number, so 
+
+---
+
+note, this has to be simple, so a player needs a simple phrase to kick off the mission .. the more complex interactions can be 
+done, but only really with CP and KC .. We can explore more complex interactions when we have the basics working 

@@ -1,9 +1,19 @@
 
-sleep 5;
-[] spawn RGGm_fnc_mission_manager;
+
+
 
 RGG_medBase = [9197,6322];
 RGG_currentObj = [0,0];
+
+// these globals declare whether a particular raptor heli is available for tasking 
+// RGG_rap1OnStat = false;
+// RGG_rap2OnStat = false;
+// RGG_rap3OnStat = false;
+// RGG_rap4OnStat = false;
+// RGG_rap5OnStat = false;
+// RGG_rap6OnStat = false;
+
+// 
 
 
 

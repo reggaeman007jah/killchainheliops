@@ -19,6 +19,13 @@ class RGGo {
 			Description = "orders given AI to unboard on landing at a given zone";
 		};
 
+		class order_decOnStat {
+			Description = "confirms player's heli and crew as being ready for tasking";
+		};
+		class order_decOffStat {
+			Description = "confirms player's heli and crew as standing down from tasking";
+		};
+
 		// class order_degroupAll {
 		// 	Description = "Sends all ARVN units into single-unit groups - for extraction";
 		// };

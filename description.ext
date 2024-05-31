@@ -1225,5 +1225,314 @@ class CfgSounds {
 		titles[] = {};
 	};
 
+	// medivac tasking - older voice with more detailed (patrol-specific) LZs - 45 points in total 
+	class thisisKC_old_a {
+		name = "thisisKColda";
+		sound[] = {"media\killchainTasking\thisIsKCa.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class thisisKC_old_b {
+		name = "thisisKColdb";
+		sound[] = {"media\killchainTasking\thisIsKCb.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class thisisKC_old_c {
+		name = "thisisKColdc";
+		sound[] = {"media\killchainTasking\thisIsKCc.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class rap1_old {
+		name = "rap1_old";
+		sound[] = {"media\killchainTasking\rap1_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class rap2_old {
+		name = "rap2_old";
+		sound[] = {"media\killchainTasking\rap2_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class rap3_old {
+		name = "rap3_old";
+		sound[] = {"media\killchainTasking\rap3_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class rap4_old {
+		name = "rap4_old";
+		sound[] = {"media\killchainTasking\rap4_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class rap5_old {
+		name = "rap5_old";
+		sound[] = {"media\killchainTasking\rap5_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class rap6_old {
+		name = "rap6_old";
+		sound[] = {"media\killchainTasking\rap6_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class mediTask_old {
+		name = "mediTask_old";
+		sound[] = {"media\killchainTasking\mediTask_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extract2_old {
+		name = "extract2_old";
+		sound[] = {"media\killchainTasking\extract2_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extract3_old {
+		name = "extract3_old";
+		sound[] = {"media\killchainTasking\extract3_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extract4_old {
+		name = "extract4_old";
+		sound[] = {"media\killchainTasking\extract4_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extract5_old {
+		name = "extract5_old";
+		sound[] = {"media\killchainTasking\extract5_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class extract6_old {
+		name = "extract6_old";
+		sound[] = {"media\killchainTasking\extract6_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class kcOut_old {
+		name = "kcOut_old";
+		sound[] = {"media\killchainTasking\kcOut_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA1_old {
+		name = "lzA1_old";
+		sound[] = {"media\killchainTasking\lzA1_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA2_old {
+		name = "lzA2_old";
+		sound[] = {"media\killchainTasking\lzA2_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA3_old {
+		name = "lzA3_old";
+		sound[] = {"media\killchainTasking\lzA3_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA4_old {
+		name = "lzA4_old";
+		sound[] = {"media\killchainTasking\lzA4_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA5_old {
+		name = "lzA5_old";
+		sound[] = {"media\killchainTasking\lzA5_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA6_old {
+		name = "lzA6_old";
+		sound[] = {"media\killchainTasking\lzA6_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA7_old {
+		name = "lzA7_old";
+		sound[] = {"media\killchainTasking\lzA7_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA8_old {
+		name = "lzA8_old";
+		sound[] = {"media\killchainTasking\lzA8_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA9_old {
+		name = "lzA9_old";
+		sound[] = {"media\killchainTasking\lzA9_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+
+	class lzB1_old {
+		name = "lzB1_old";
+		sound[] = {"media\killchainTasking\lzB1_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzB2_old {
+		name = "lzB2_old";
+		sound[] = {"media\killchainTasking\lzB2_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzB3_old {
+		name = "lzB3_old";
+		sound[] = {"media\killchainTasking\lzB3_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzB4_old {
+		name = "lzB4_old";
+		sound[] = {"media\killchainTasking\lzB4_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzB5_old {
+		name = "lzB5_old";B		sound[] = {"media\killchainTasking\lzB5_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzB6_old {
+		name = "lzB6_old";
+		sound[] = {"media\killchainTasking\lzB6_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzB7_old {
+		name = "lzB7_old";
+		sound[] = {"media\killchainTasking\lzB7_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzB8_old {
+		name = "lzB8_old";
+		sound[] = {"media\killchainTasking\lzB8_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzB9_old {
+		name = "lzB9_old";
+		sound[] = {"media\killchainTasking\lzB9_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+
+	class lzC1_old {
+		name = "lzC1_old";
+		sound[] = {"media\killchainTasking\lzC1_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzC2_old {
+		name = "lzC2_old";
+		sound[] = {"media\killchainTasking\lzC2_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzC3_old {
+		name = "lzC3_old";
+		sound[] = {"media\killchainTasking\lzC3_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzC4_old {
+		name = "lzC4_old";
+		sound[] = {"media\killchainTasking\lzC4_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzC5_old {
+		name = "lzC5_old";
+		sound[] = {"media\killchainTasking\lzC5_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzC6_old {
+		name = "lzC6_old";
+		sound[] = {"media\killchainTasking\lzC6_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzC7_old {
+		name = "lzC7_old";
+		sound[] = {"media\killchainTasking\lzC7_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzC8_old {
+		name = "lzC8_old";
+		sound[] = {"media\killchainTasking\lzC8_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzC9_old {
+		name = "lzC9_old";
+		sound[] = {"media\killchainTasking\lzC9_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+
+	class lzD1_old {
+		name = "lzD1_old";
+		sound[] = {"media\killchainTasking\lzD1_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzD2_old {
+		name = "lzD2_old";
+		sound[] = {"media\killchainTasking\lzD2_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzD3_old {
+		name = "lzD3_old";
+		sound[] = {"media\killchainTasking\lzD3_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzD4_old {
+		name = "lzD4_old";
+		sound[] = {"media\killchainTasking\lzD4_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzD5_old {
+		name = "lzD5_old";
+		sound[] = {"media\killchainTasking\lzD5_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzD6_old {
+		name = "lzD6_old";
+		sound[] = {"media\killchainTasking\lzD6_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzD7_old {
+		name = "lzD7_old";
+		sound[] = {"media\killchainTasking\lzD7_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzD8_old {
+		name = "lzD8_old";
+		sound[] = {"media\killchainTasking\lzD8_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzD9_old {
+		name = "lzD9_old";
+		sound[] = {"media\killchainTasking\lzD9_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+
+	class lzE1_old {
+		name = "lzE1_old";
+		sound[] = {"media\killchainTasking\lzE1_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzE2_old {
+		name = "lzE2_old";
+		sound[] = {"media\killchainTasking\lzE2_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzE3_old {
+		name = "lzE3_old";
+		sound[] = {"media\killchainTasking\lzE3_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzA4_old {
+		name = "lzE4_old";
+		sound[] = {"media\killchainTasking\lzE4_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzE5_old {
+		name = "lzE5_old";
+		sound[] = {"media\killchainTasking\lzE5_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzE6_old {
+		name = "lzE6_old";
+		sound[] = {"media\killchainTasking\lzE6_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzE7_old {
+		name = "lzE7_old";
+		sound[] = {"media\killchainTasking\lzE7_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzE8_old {
+		name = "lzE8_old";
+		sound[] = {"media\killchainTasking\lzE8_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class lzE9_old {
+		name = "lzE9_old";
+		sound[] = {"media\killchainTasking\lzE9_old.ogg", db + 0, 1};
+		titles[] = {};
+	};
 };
 
