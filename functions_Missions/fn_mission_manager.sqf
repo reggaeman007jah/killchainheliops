@@ -8,17 +8,32 @@ notes: this is called from an init.sqf CBA keybind and hopefully is able to rela
 */
 
 params ["_heli"];
-
 // if this works, we can dectate specific missions based on the heli type passed - slick, gun, scout etc 
 
-_lzRef = selectRandom [1,2,3,4,5,6,7,8,9,10];
-_lzRefStr = str _lzRef;
-_marker = "lz" + _lzRefStr;
-_target = getMarkerPos _marker;
+// _patrol = selectRandom ["a", "b", "c", "d", "e"];
+_patrol = selectRandom ["a"];
+_patrolLz = selectRandom ["1","2","3","4","5","6","7","8","9"];
+
+
+
+
+// _lzRef = selectRandom [1,2,3,4,5,6,7,8,9,10];
+_lzRef = ("lz" + _patrol + _patrolLz);
+// _lzRefStr = str _lzRef;
+systemChat format ["_lzRef: %1", _lzRef];
+
+sleep 5;
+
+
+
+// _marker = "lz" + _lzRefStr;
+// _marker = "lz" + _patrol + Lz;
+_target = getMarkerPos _lzRef;
 
 RGG_currentObj = _target;
 
 _missionType = selectRandom ["MEDIVAC"]; // make more here 
-[_target, 3000, _lzRef, _missionType] spawn RGGm_fnc_mission_extractInjured; // only mission we have rn 
+systemChat "sending the following to RGGm_fnc_mission_extractInjured:";
+systemChat format ["%1 %2 %3 %4 %5", _target, 3000, _lzRef, _missionType, _heli];
+[_target, 3000, _lzRef, _missionType, _heli] spawn RGGm_fnc_mission_extractInjured; // only mission we have rn 
 
-["_extractPos", "_cycleLimit", "_lzRef", "_missionType"];

@@ -3,15 +3,18 @@ spawn_boardingInjured FNC
 Updated: 24 May 24 
 Purpose: Spawns in injured units who await a heli to land nearby, to which they will board  
 Author: Reggs 
+
+_extractPos = spawnpoint of extraction 
+_numInj = passed number of injured to pickup 
 */
 
-params ["_extractPos"];
+params ["_extractPos", "_numInj"];
 
 // check helis nearby and create units based on that number? For now keep as a set 4-6
 
 _toBoard = [];
 
-for "_i" from 1 to (selectRandom [4,5,6]) do {
+for "_i" from 1 to _numInj do {
 	systemChat "creating injured unit";
 	_indiGroup = createGroup west;
 	_class = [] call RGGg_fnc_get_randomArmyClassname;  

@@ -1243,112 +1243,112 @@ class CfgSounds {
 	};
 	class rap1_old {
 		name = "rap1_old";
-		sound[] = {"media\killchainTasking\rap1_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\raptor1.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class rap2_old {
 		name = "rap2_old";
-		sound[] = {"media\killchainTasking\rap2_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\raptor2.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class rap3_old {
 		name = "rap3_old";
-		sound[] = {"media\killchainTasking\rap3_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\raptor3.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class rap4_old {
 		name = "rap4_old";
-		sound[] = {"media\killchainTasking\rap4_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\raptor4.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class rap5_old {
 		name = "rap5_old";
-		sound[] = {"media\killchainTasking\rap5_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\raptor5.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class rap6_old {
 		name = "rap6_old";
-		sound[] = {"media\killchainTasking\rap6_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\raptor6.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class mediTask_old {
 		name = "mediTask_old";
-		sound[] = {"media\killchainTasking\mediTask_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\medivacTask.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class extract2_old {
 		name = "extract2_old";
-		sound[] = {"media\killchainTasking\extract2_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\extract2.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class extract3_old {
 		name = "extract3_old";
-		sound[] = {"media\killchainTasking\extract3_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\extract3.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class extract4_old {
 		name = "extract4_old";
-		sound[] = {"media\killchainTasking\extract4_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\extract4.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class extract5_old {
 		name = "extract5_old";
-		sound[] = {"media\killchainTasking\extract5_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\extract5.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class extract6_old {
 		name = "extract6_old";
-		sound[] = {"media\killchainTasking\extract6_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\extract6.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class kcOut_old {
 		name = "kcOut_old";
-		sound[] = {"media\killchainTasking\kcOut_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\kcOut.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA1_old {
 		name = "lzA1_old";
-		sound[] = {"media\killchainTasking\lzA1_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA1.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA2_old {
 		name = "lzA2_old";
-		sound[] = {"media\killchainTasking\lzA2_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA2.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA3_old {
 		name = "lzA3_old";
-		sound[] = {"media\killchainTasking\lzA3_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA3.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA4_old {
 		name = "lzA4_old";
-		sound[] = {"media\killchainTasking\lzA4_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA4.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA5_old {
 		name = "lzA5_old";
-		sound[] = {"media\killchainTasking\lzA5_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA5.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA6_old {
 		name = "lzA6_old";
-		sound[] = {"media\killchainTasking\lzA6_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA6.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA7_old {
 		name = "lzA7_old";
-		sound[] = {"media\killchainTasking\lzA7_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA7.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA8_old {
 		name = "lzA8_old";
-		sound[] = {"media\killchainTasking\lzA8_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA8.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzA9_old {
 		name = "lzA9_old";
-		sound[] = {"media\killchainTasking\lzA9_old.ogg", db + 0, 1};
+		sound[] = {"media\killchainTasking\lzA9.ogg", db + 0, 1};
 		titles[] = {};
 	};
 
@@ -1373,7 +1373,8 @@ class CfgSounds {
 		titles[] = {};
 	};
 	class lzB5_old {
-		name = "lzB5_old";B		sound[] = {"media\killchainTasking\lzB5_old.ogg", db + 0, 1};
+		name = "lzB5_old";
+		sound[] = {"media\killchainTasking\lzB5_old.ogg", db + 0, 1};
 		titles[] = {};
 	};
 	class lzB6_old {
@@ -1504,7 +1505,7 @@ class CfgSounds {
 		sound[] = {"media\killchainTasking\lzE3_old.ogg", db + 0, 1};
 		titles[] = {};
 	};
-	class lzA4_old {
+	class lzE4_old {
 		name = "lzE4_old";
 		sound[] = {"media\killchainTasking\lzE4_old.ogg", db + 0, 1};
 		titles[] = {};
