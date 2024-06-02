@@ -11,10 +11,10 @@ _missionType: used for announcement to player
 _currentHeat: used for announcement to player 
 */
 
-params ["_extractPos", "_cycleLimit", "_lzRef", "_missionType", "_raptorNum"];
+params ["_extractPos", "_cycleLimit", "_lzRef", "_missionType", "_raptor"];
 
-systemChat "running FNC extractInjured, received:";
-systemChat format ["%1 %2 %3 %4 %5", _extractPos, _cycleLimit, _lzRef, _missionType, _raptorNum];
+// systemChat "running FNC extractInjured, received:";
+// systemChat format ["%1 %2 %3 %4 %5", _extractPos, _cycleLimit, _lzRef, _missionType, _raptorNum];
 
 _numInj = selectRandom [3,4,5,6];
 
@@ -32,9 +32,9 @@ while {_proxCheck} do {
 	if (_cnt == 0) then {
 		_proxCheck = false;
 		// systemChat "DEBUG - a new mission is generated as there are no players near to the selected mission position";
-		systemChat "sending to RGGm_fnc_mission_announcer:";
-		systemChat format ["%1, %2, %3, %4", _lzRef, _missionType, _numInj, _raptorNum];
-		[_lzRef, _missionType, _numInj, _raptorNum] call RGGm_fnc_mission_announcer;
+		// systemChat "sending to RGGm_fnc_mission_announcer:";
+		// systemChat format ["%1, %2, %3, %4", _lzRef, _missionType, _numInj, _raptor];
+		[_lzRef, _missionType, _numInj, _raptor] call RGGm_fnc_mission_announcer;
 	} else {
 		systemChat "DEBUG - a new mission cannot be generated yet as there is at least one player too near to the selected position";
 	};
@@ -59,7 +59,7 @@ while {_checkCycle} do {
 			_checkCycle = false;
 			
 			[_extractPos] spawn RGGs_fnc_spawn_advanceTeam;
-			[_extractPos, _numInj] spawn RGGs_fnc_spawn_boardingInjured;
+			[_extractPos, _numInj, _raptor] spawn RGGs_fnc_spawn_boardingInjured;
 
 			// maybe here, the deleteAllWithinArea needs to be linked to the created units for pickup - so checkCycle to see if any are on ground 
 			// if all units are removed from area, or dead, then delete can occur, and new mission created, from the delete FNC 

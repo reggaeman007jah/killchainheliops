@@ -13,8 +13,15 @@ RGG_currentObj = [0,0];
 // RGG_rap5OnStat = false;
 // RGG_rap6OnStat = false;
 
-// 
+// manages whether individual raptors can take a new task or not 
+RGG_rap1onTask = false;
+RGG_rap2onTask = false;
+RGG_rap3onTask = false;
+RGG_rap4onTask = false;
+RGG_rap5onTask = false;
+RGG_rap6onTask = false;
 
+// send rap number through function chain to ensure it gets to deleteAllInArea - so when run, can free up said raptor 
 
 
 

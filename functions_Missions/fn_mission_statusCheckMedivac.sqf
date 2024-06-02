@@ -9,7 +9,7 @@ _extractPos: anchor pos for checks
 _timeLimit = eg time this must be done by before being marked as failure 
 */
 
-params ["_units", "_extractPos", "_timeLimit"];
+params ["_units", "_extractPos", "_timeLimit", "_raptorNum"];
 
 systemChat "Running status check Medivac";
 systemChat format ["Units needing extraction: %1", (count _units)];
@@ -34,7 +34,7 @@ while {_check} do {
 
 	if ((count _data) == 0) then {
 		systemChat "DEBUG - statusCheckMedivac - good to progress delete_allWithinArea";
-		[_extractPos, 500, 1500, 30] spawn RGGd_fnc_delete_allWithinArea; // deletes all in mission area when all units have left AO - make sure playerProx check is solid here! 
+		[_extractPos, 500, 1500, 30, _raptorNum] spawn RGGd_fnc_delete_allWithinArea; // deletes all in mission area when all units have left AO - make sure playerProx check is solid here! 
 
 		// try this to manage deletion of boarding markers, if they are KIA before the marker could be deleted normally 
 		{
@@ -56,13 +56,17 @@ while {_check} do {
 		} forEach _units;
 
 		// ten minute timeout 
-		if (_it > 10) then {
+		if (_it > 4) then {
 			// any boarder still on the ground will bleed out 
 			{
-				_distance = (getPos _x) distance _extractPos;
-				if ((_distance < 100) && (alive _x)) then {
-					_x setDamage 1;
-				};
+				if (vehicle _x == _x) then {
+					_distance = (getPos _x) distance _extractPos;
+					if ((_distance < 100) && (alive _x) && (_unit != (vehicle _unit))) then {
+						_x setDamage 1;
+						systemChat "unit bled out";
+					};
+				};	
+
 			} forEach _units;
 
 		};

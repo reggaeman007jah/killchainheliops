@@ -10,7 +10,7 @@ _plrDist: min dist all players must be beofre this can happen
 _cycle: check freq 
 */
 
-params ["_anchor", "_rad", "_plrDist", "_cycle"];
+params ["_anchor", "_rad", "_plrDist", "_cycle", "_raptorNum"];
 
 
 _chk = true;
@@ -26,10 +26,68 @@ while {_chk} do {
 
 	_cnt = count _data;
 	if (_cnt == 0) then {
-		systemChat format ["DEBUG - - - DELETING IN-FIELD UNITS AT %1 FOLLOWING ZERO PLAYER FOUND NEARBY", _anchor];
+		// systemChat format ["DEBUG - - - DELETING IN-FIELD UNITS AT %1 FOLLOWING ZERO PLAYER FOUND NEARBY", _anchor];
 		{ 
 			deleteVehicle _x;
 		} forEach nearestObjects [_anchor, ['all'], _rad];
+
+		// free up raptor for new task 
+
+		_heliStr = str _raptorNum;
+		_numb = _heliStr select [6, 1];
+
+
+		switch (_numb) do {
+			case "1": { 
+				if (RGG_rap1onTask == true) then {
+					RGG_rap1onTask = false;
+					[_raptorNum] spawn RGGm_fnc_mission_manager;	
+				} else {
+					systemChat "Raptor 1 is already tasked - complete current task before taking another";
+				};
+			};
+			case "2": { 
+				if (RGG_rap2onTask == true) then {
+					RGG_rap2onTask = false;
+					[_raptorNum] spawn RGGm_fnc_mission_manager;	
+				} else {
+					systemChat "Raptor 2 is already tasked - complete current task before taking another";
+				};
+			};
+			case "3": { 
+				if (RGG_rap3onTask == true) then {
+					RGG_rap3onTask = false;
+					[_raptorNum] spawn RGGm_fnc_mission_manager;	
+				} else {
+					systemChat "Raptor 3 is already tasked - complete current task before taking another";
+				};
+			};
+			case "4": { 
+				if (RGG_rap4onTask == true) then {
+					RGG_rap4onTask = false;
+					[_raptorNum] spawn RGGm_fnc_mission_manager;	
+				} else {
+					systemChat "Raptor 4 is already tasked - complete current task before taking another";
+				};
+			};
+			case "5": { 
+				if (RGG_rap5onTask == true) then {
+					RGG_rap5onTask = false;
+					[_raptorNum] spawn RGGm_fnc_mission_manager;	
+				} else {
+					systemChat "Raptor 5 is already tasked - complete current task before taking another";
+				};
+			};
+			case "6": { 
+				if (RGG_rap6onTask == true) then {
+					RGG_rap6onTask = false;
+					[_raptorNum] spawn RGGm_fnc_mission_manager;	
+				} else {
+					systemChat "Raptor 6 is already tasked - complete current task before taking another";
+				};
+			};
+			default { systemChat "raptor tasking switch error"};
+		};
 
 		sleep 2;
 
@@ -41,7 +99,7 @@ while {_chk} do {
 		// 	systemChat "mission is already live";
 		// };
 
-		[] spawn RGGm_fnc_mission_manager;
+		// [] spawn RGGm_fnc_mission_manager; // issue here as no heli is passed, so for now we make this a manual trigger / keybind 
 		_chk = false;
 	};
 

@@ -33,7 +33,7 @@ _target = getMarkerPos _lzRef;
 RGG_currentObj = _target;
 
 _missionType = selectRandom ["MEDIVAC"]; // make more here 
-systemChat "sending the following to RGGm_fnc_mission_extractInjured:";
-systemChat format ["%1 %2 %3 %4 %5", _target, 3000, _lzRef, _missionType, _heli];
+// systemChat "sending the following to RGGm_fnc_mission_extractInjured:";
+// systemChat format ["%1 %2 %3 %4 %5", _target, 3000, _lzRef, _missionType, _heli];
 [_target, 3000, _lzRef, _missionType, _heli] spawn RGGm_fnc_mission_extractInjured; // only mission we have rn 
 

@@ -34,12 +34,12 @@ while {_check} do {
 			_check = false;
 		};
 	};
-	sleep 10;
+	sleep 5;
 };
 
 sleep 2;
 _cargo allowDamage true;
-sleep (random 10);
+sleep (random 4);
 
 _cargo setUnitPos "UP";
 _cargo doMove _moveTo;
@@ -49,7 +49,7 @@ _unitGrp = group _cargo;
 _unitGrp setSpeedMode "limited";
 
 // cleanup 
-[[_cargo], _moveTo, 150, 10] spawn RGGd_fnc_delete_whenNoPlayers; // this shouldd only happen once! not repeated for each passenger!!! 
+[[_cargo], _moveTo, 150, 10] spawn RGGd_fnc_delete_whenNoPlayers; // this should only happen once! not repeated for each passenger!!! 
 
 
 

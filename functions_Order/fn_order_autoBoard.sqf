@@ -90,8 +90,10 @@ while {_check2} do {
 		_posUnit = getPos _unitToBoard;	
 		_altHeli = _posHeli select 2;
 		if (_altHeli > 2) then {
-			// heli took off, restart process 
+			// heli took off without them, restart process 
 			_check2 = false;
+			deleteMarker _name;
+			systemChat "unit left on ground!!";
 			[_unitToBoard] spawn RGGo_fnc_order_autoBoard; 
 		};
 	};
