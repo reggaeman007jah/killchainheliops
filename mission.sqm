@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=641;
+	toggles=513;
 	class ItemIDProvider
 	{
 		nextID=152;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12334.657,139.53618,2427.8457};
-		dir[]={0.63227528,-0.48771608,0.60196429};
-		up[]={0.35323027,0.87300235,0.33629656};
-		aside[]={0.68953353,-1.4901161e-008,-0.72425389};
+		pos[]={10974.609,129.45168,3078.0696};
+		dir[]={-0.64158112,-0.53272814,-0.55188274};
+		up[]={-0.40386835,0.84628642,-0.34740418};
+		aside[]={-0.65212286,-1.4901161e-008,0.75811338};
 	};
 };
 binarizationWanted=0;
@@ -953,7 +953,7 @@ class Mission
 			};
 			id=114;
 			type="vn_b_air_uh1c_07_05";
-			atlOffset=0.0010147095;
+			atlOffset=0.0010223389;
 		};
 		class Item12
 		{

@@ -1,10 +1,14 @@
 Using following elevenLabs voices:
 
-Killchain Command Voice: Chris .. changed to Paul 
+Killchain Command Voice: Chris .. changed to Paul then back to Chris 
 
 Copilot Voice: Josh
 
 Patrol Voices: TBC
+
+
+
+
 
 a player can declare they are reqdy for tasking, as follows:
 
@@ -67,3 +71,31 @@ The keybind sends the raptor number, so
 
 note, this has to be simple, so a player needs a simple phrase to kick off the mission .. the more complex interactions can be 
 done, but only really with CP and KC .. We can explore more complex interactions when we have the basics working 
+
+.. new
+
+
+KC Voice Actor: Chris 
+Raptor CP Actor: Josh 
+Victor Actual Actor: Harry
+
+KC - Raptor 1 Kilo Charlie 
+R1 - Go ahead Kilo Charlie 
+KC - Raptor, Victor patrol requires a medivac at LZ Alpha 1, how copy?
+R1 - thats a good copy Kilo Charlie, how many units?
+KC - 5 units, ready for extraction 
+R1 - Raptor copies and will comply, Raptor out 
+
+Victor Patrol will be operating in Alpha area .. with 9 LZs allocated to that group 
+
+on approach...
+
+V1 - Raptor this is Victor 1 Actual 
+R1 - Go ahead Victor 1 
+V1 - Raptor we've got some injured that need extraction, on yellow smoke, how copy?
+R1 - Raptor copies, yellow smoke, Raptor out 
+
+naming convention for audio files from elevenLabs 
+kc_ - Killchain Command 
+cp_ - Your Copilot 
+v1_ - Victor One Actual 

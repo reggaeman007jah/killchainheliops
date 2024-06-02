@@ -85,386 +85,12 @@ class Header {
 class CfgSounds {
 	sounds[] = {};
 
-	class newRespawn {
-		name = "newRespawn";
-		sound[] = {"media\voice3\newRespawn.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class authority {
-		name = "authority";
-		sound[] = {"media\voice3\authority.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class loadout {
-		name = "loadout";
-		sound[] = {"media\voice3\loadout.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class luck {
-		name = "luck";
-		sound[] = {"media\voice3\luck.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class welcome {
-		name = "welcome";
-		sound[] = {"media\voice3\welcome.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class alreadyLive {
-		name = "alreadyLive";
-		sound[] = {"media\voice3\alreadyLive.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class moveToNext {
-		name = "moveToNext";
-		sound[] = {"media\voice3\moveToNext.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class moveToNext2 {
-		name = "moveToNext2";
-		sound[] = {"media\voice3\moveToNext2.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class moveToObj1 {
-		name = "moveToObj1";
-		sound[] = {"media\voice3\moveToObj1.ogg", db+15, 1};
-		titles[] = {};
-	};
-	class point1Taken {
-		name = "point1Taken";
-		sound[] = {"media\voice3\point1Taken.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class point2Taken {
-		name = "point2Taken";
-		sound[] = {"media\voice3\point2Taken.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class point3Taken {
-		name = "point3Taken";
-		sound[] = {"media\voice3\point3Taken.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class point4Taken {
-		name = "point4Taken";
-		sound[] = {"media\voice3\point4Taken.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class missionFailed {
-		name = "missionFailed";
-		sound[] = {"media\voice3\missionFailed.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class objwonback {
-		name = "objwonback";
-		sound[] = {"media\voice3\objwonback.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class objlostcontrol {
-		name = "objlostcontrol";
-		sound[] = {"media\voice3\objlostcontrol.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class win {
-		name = "win";
-		sound[] = {"media\voice3\win.ogg", db+12, 1};
-		titles[] = {};
-	};
-	class win2 {
-		name = "win2";
-		sound[] = {"media\voice3\win2.ogg", db+12, 1};
-		titles[] = {};
-	};
-
 	class info {
 		sound[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hint",0.891251,1};
 		titles[] = {};
 	};
-	class valk {
-		name = "valk";
-		sound[] = {"media\music\valk2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class commandOut {
-		name = "commandOut";
-		sound[] = {"media\voice\commandOut.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class leavingFOB1 {
-		name = "leavingFOB1";
-		sound[] = {"media\voice\leavingFOB1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class leavingFOB2 {
-		name = "leavingFOB2";
-		sound[] = {"media\voice\leavingFOB2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class opforNeutralised1 {
-		name = "opforNeutralised1";
-		sound[] = {"media\voice\opforNeutralised1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class opforNeutralised2 {
-		name = "opforNeutralised2";
-		sound[] = {"media\voice\opforNeutralised2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class patrolMoving1 {
-		name = "patrolMoving1";
-		sound[] = {"media\voice\patrolMoving1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class patrolMoving2 {
-		name = "patrolMoving2";
-		sound[] = {"media\voice\patrolMoving2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class patrolNowLive1 {
-		name = "patrolNowLive1";
-		sound[] = {"media\voice\patrolNowLive1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class patrolNowLive2 {
-		name = "patrolNowLive2";
-		sound[] = {"media\voice\patrolNowLive2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class pointTakenPrepare1 {
-		name = "pointTakenPrepare1";
-		sound[] = {"media\voice\pointTakenPrepare1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class pointTakenPrepare2 {
-		name = "pointTakenPrepare2";
-		sound[] = {"media\voice\pointTakenPrepare2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class pointTakenPrepare3 {
-		name = "pointTakenPrepare3";
-		sound[] = {"media\voice\pointTakenPrepare3.ogg", 3000, 1};
-		titles[] = {};
-	};
-	class RFInbound {
-		name = "RFInbound";
-		sound[] = {"media\voice\RFInbound.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class thisIsCommand1 {
-		name = "thisIsCommand1";
-		sound[] = {"media\voice\thisIsCommand1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class thisIsCommand2 {
-		name = "thisIsCommand2";
-		sound[] = {"media\voice\thisIsCommand2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class thisIsCommand3 {
-		name = "thisIsCommand3";
-		sound[] = {"media\voice\thisIscommand3.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class welcome1 {
-		name = "welcome1";
-		sound[] = {"media\voice\welcome1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class welcome2 {
-		name = "welcome2";
-		sound[] = {"media\voice\welcome2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class enemyAtGrid {
-		name = "enemyAtGrid";
-		sound[] = {"media\voice\enemyAtGrid.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num0 {
-		name = "num0";
-		sound[] = {"media\voice\newnew0.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num1 {
-		name = "num1";
-		sound[] = {"media\voice\newnew1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num2 {
-		name = "num2";
-		sound[] = {"media\voice\newnew2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num3 {
-		name = "num3";
-		sound[] = {"media\voice\newnew3.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num4 {
-		name = "num4";
-		sound[] = {"media\voice\newnew4.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num5 {
-		name = "num5";
-		sound[] = {"media\voice\newnew5.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num6 {
-		name = "num6";
-		sound[] = {"media\voice\newnew6.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num7 {
-		name = "num7";
-		sound[] = {"media\voice\newnew7.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num8 {
-		name = "num8";
-		sound[] = {"media\voice\newnew8.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class num9 {
-		name = "num9";
-		sound[] = {"media\voice\newnew9.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	// class squelch {
-	// 	name = "squelch";
-	// 	sound[] = {"media\voice2\squelch.ogg", db + 0, 1};
-	// 	titles[] = {};
-	// };
-	class attack {
-		name = "attack";
-		sound[] = {"media\voice2\attack.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class hold {
-		name = "hold";
-		sound[] = {"media\voice2\hold.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class fallback {
-		name = "fallback";
-		sound[] = {"media\voice2\fallback.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class fallbackremain {
-		name = "fallbackremain";
-		sound[] = {"media\voice2\fallbackremain.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class jungle1 {
-		name = "jungle1";
-		sound[] = {"media\jungle\jungle1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night1 {
-		name = "night1";
-		sound[] = {"media\jungleNight\night1.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night2 {
-		name = "night2";
-		sound[] = {"media\jungleNight\night2.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night3 {
-		name = "night3";
-		sound[] = {"media\jungleNight\night3.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night4 {
-		name = "night4";
-		sound[] = {"media\jungleNight\night4.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night5 {
-		name = "night5";
-		sound[] = {"media\jungleNight\night5.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night6 {
-		name = "night6";
-		sound[] = {"media\jungleNight\night6.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night7 {
-		name = "night7";
-		sound[] = {"media\jungleNight\night7.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night8 {
-		name = "night8";
-		sound[] = {"media\jungleNight\night8.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night9 {
-		name = "night9";
-		sound[] = {"media\jungleNight\night9.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night10 {
-		name = "night10";
-		sound[] = {"media\jungleNight\night10.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night11 {
-		name = "night11";
-		sound[] = {"media\jungleNight\night11.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night12 {
-		name = "night12";
-		sound[] = {"media\jungleNight\night12.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night13 {
-		name = "night13";
-		sound[] = {"media\jungleNight\night13.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night14 {
-		name = "night14";
-		sound[] = {"media\jungleNight\night14.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night15 {
-		name = "night15";
-		sound[] = {"media\jungleNight\night15.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night16 {
-		name = "night16";
-		sound[] = {"media\jungleNight\night16.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night17 {
-		name = "night17";
-		sound[] = {"media\jungleNight\night17.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night18 {
-		name = "night18";
-		sound[] = {"media\jungleNight\night18.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night19 {
-		name = "night19";
-		sound[] = {"media\jungleNight\night19.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night20 {
-		name = "night20";
-		sound[] = {"media\jungleNight\night20.ogg", db + 0, 1};
-		titles[] = {};
-	};
-	class night21 {
-		name = "night21";
-		sound[] = {"media\jungleNight\night21.ogg", db + 0, 1};
-		titles[] = {};
-	};
+
+	// Clock Nav 
 	class 1oc {
 		name = "1oc";
 		sound[] = {"media\wayfinder\1OC.ogg", db + 0, 1};
@@ -590,6 +216,8 @@ class CfgSounds {
 		sound[] = {"media\wayfinder\distance.ogg", db + 0, 1};
 		titles[] = {};
 	};
+	// clock nav end 
+
 	class n0 {
 		name = "n0";
 		sound[] = {"media\wayfinder\num0.ogg", db + 0, 1};
@@ -650,6 +278,8 @@ class CfgSounds {
 		sound[] = {"media\wayfinder\standby.ogg", db + 0, 1};
 		titles[] = {};
 	};
+
+	// 
 	class adjL {
 		name = "adjL";
 		sound[] = {"media\wayDist\adjL.ogg", db + 0, 1};
@@ -1535,5 +1165,161 @@ class CfgSounds {
 		sound[] = {"media\killchainTasking\lzE9_old.ogg", db + 0, 1};
 		titles[] = {};
 	};
+
+	// revised Kilo Charlie Audio start
+	class kc_rap1 {
+		name = "kc_rap1";
+		sound[] = {"media\kiloCharlie\kc_rap1.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_rap2 {
+		name = "kc_rap2";
+		sound[] = {"media\kiloCharlie\kc_rap2.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_rap3 {
+		name = "kc_rap3";
+		sound[] = {"media\kiloCharlie\kc_rap3.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_rap4 {
+		name = "kc_rap4";
+		sound[] = {"media\kiloCharlie\kc_rap4.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_rap5 {
+		name = "kc_rap5";
+		sound[] = {"media\kiloCharlie\kc_rap5.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_rap6 {
+		name = "kc_rap6";
+		sound[] = {"media\kiloCharlie\kc_rap6.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_2UnitsExtract {
+		name = "kc_2UnitsExtract";
+		sound[] = {"media\kiloCharlie\kc_2UnitsExtract.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_3UnitsExtract {
+		name = "kc_3UnitsExtract";
+		sound[] = {"media\kiloCharlie\kc_3UnitsExtract.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_4UnitsExtract {
+		name = "kc_4UnitsExtract";
+		sound[] = {"media\kiloCharlie\kc_4UnitsExtract.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_5UnitsExtract {
+		name = "kc_5UnitsExtract";
+		sound[] = {"media\kiloCharlie\kc_5UnitsExtract.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_6UnitsExtract {
+		name = "kc_6UnitsExtract";
+		sound[] = {"media\kiloCharlie\kc_6UnitsExtract.ogg", db + 0, 1};
+		titles[] = {};
+	};  
+	class kc_victorMedA1 {
+		name = "kc_victorMedA1";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA1.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_victorMedA2 {
+		name = "kc_victorMedA2";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA2.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_victorMedA3 {
+		name = "kc_victorMedA3";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA3.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_victorMedA4 {
+		name = "kc_victorMedA4";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA4.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_victorMedA5 {
+		name = "kc_victorMedA5";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA5.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_victorMedA6 {
+		name = "kc_victorMedA6";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA6.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_victorMedA7 {
+		name = "kc_victorMedA7";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA7.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_victorMedA8 {
+		name = "kc_victorMedA8";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA8.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class kc_victorMedA9 {
+		name = "kc_victorMedA9";
+		sound[] = {"media\kiloCharlie\kc_victorMedivacA9.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	// revised Kilo Charlie Audio end  
+
+	// Victor One Actual Start 
+	class v1_rapAck {
+		name = "v1_rapAck";
+		sound[] = {"media\victorOne\v1_raptorAck.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class v1_woundedYellowA {
+		name = "v1_woundedYellowA";
+		sound[] = {"media\victorOne\v1_woundedYellowA.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class v1_woundedYellowB {
+		name = "v1_woundedYellowB";
+		sound[] = {"media\victorOne\v1_woundedYellowB.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class v1_woundedYellowC {
+		name = "v1_woundedYellowC";
+		sound[] = {"media\victorOne\v1_woundedYellowC.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	// Victor One Actual End 
+
+	// Copilot Start 
+	class cp_copyYellowOut {
+		name = "cp_copyYellowOut";
+		sound[] = {"media\copilot\cp_copyYellowOut.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class cp_goAhead {
+		name = "cp_goAhead";
+		sound[] = {"media\copilot\cp_goAhead.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class cp_goAheadV1 {
+		name = "cp_goAheadV1";
+		sound[] = {"media\copilot\cp_goAheadV1.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class cp_goodCopyHowMany {
+		name = "cp_goodCopyHowMany";
+		sound[] = {"media\copilot\cp_goodCopyHowMany.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	class cp_wilcoOut {
+		name = "cp_wilcoOut";
+		sound[] = {"media\copilot\cp_wilcoOut.ogg", db + 0, 1};
+		titles[] = {};
+	}; 
+	// Copilot End 
+
+
 };
 

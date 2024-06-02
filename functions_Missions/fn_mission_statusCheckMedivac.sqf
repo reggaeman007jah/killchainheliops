@@ -39,7 +39,7 @@ while {_check} do {
 		// try this to manage deletion of boarding markers, if they are KIA before the marker could be deleted normally 
 		{
 			deleteMarker (str _x);
-			systemChat format ["DEleting marker: %1", (str _x)];
+			systemChat format ["Deleting marker: %1", (str _x)];
 		} forEach _units;
 
 		_check = false;

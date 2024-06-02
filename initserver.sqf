@@ -2,7 +2,7 @@
 
 
 
-RGG_medBase = [9197,6322];
+RGG_medBase = [9197,6322]; // ie Pathfinder base 
 RGG_currentObj = [0,0];
 
 // these globals declare whether a particular raptor heli is available for tasking 
