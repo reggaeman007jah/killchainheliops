@@ -6,11 +6,13 @@ Author: Reggs
 
 _extractPos = spawnpoint of extraction 
 _numInj = passed number of injured to pickup 
+_raptorNum = asset name of heli, e.g. raptor1
+
+Notes:
+check helis nearby and create units based on that number? For now keep as a set 4-6
 */
 
 params ["_extractPos", "_numInj", "_raptorNum"];
-
-// check helis nearby and create units based on that number? For now keep as a set 4-6
 
 _toBoard = [];
 
@@ -32,7 +34,8 @@ for "_i" from 1 to _numInj do {
 	} forEach _mags;
 
 
-	_unit setDamage (selectRandom [0.7, 0.8, 0.9]);
+	// _unit setDamage (selectRandom [0.7, 0.8, 0.9]);
+	_unit setDamage (selectRandom [0.5]);
 	_unit setUnitPos (selectRandom ["middle"]);
 	sleep 0.3;
 };
@@ -44,14 +47,17 @@ for "_i" from 1 to _numInj do {
 
 // this next FNC is run on each unit individually, to manage the fact that multiple helis / players may be picking up .. 
 // so each unit has to behave independently of the others
-{
-	[_x] spawn RGGo_fnc_order_autoBoard; 
-} forEach _toBoard;
+// {
+// 	[_x] spawn RGGo_fnc_order_autoBoard; 
+// } forEach _toBoard;
+
+[_toBoard, _extractPos] spawn RGGo_fnc_order_autoBoardV2; 
+
 
 // ["_anchor", "_minEnemy", "_maxEnemy", "_minDist", "_maxDist", "_playerProxTrig", "_moveIn", "_grouped"] RGGs_fnc_spawn_hotLZ;
 [_extractPos, 10, 20, 100, 120, 10, false, false] spawn RGGs_fnc_spawn_hotLZ; // make random 
 
-// audio exchange between patrol and copilot
+// audio exchange between patrol and copilot - use plrsInHeli FNC to ensure only those players in a vic hears this exchange 
 
 {
 	{playSound "v1_rapAck"} remoteExec ["call", _x];

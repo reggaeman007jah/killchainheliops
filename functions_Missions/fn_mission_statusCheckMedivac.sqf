@@ -37,10 +37,10 @@ while {_check} do {
 		[_extractPos, 500, 1500, 30, _raptorNum] spawn RGGd_fnc_delete_allWithinArea; // deletes all in mission area when all units have left AO - make sure playerProx check is solid here! 
 
 		// try this to manage deletion of boarding markers, if they are KIA before the marker could be deleted normally 
-		{
-			deleteMarker (str _x);
-			systemChat format ["Deleting marker: %1", (str _x)];
-		} forEach _units;
+		// {
+		// 	deleteMarker (str _x);
+		// 	systemChat format ["Deleting marker: %1", (str _x)];
+		// } forEach _units;
 
 		_check = false;
 	} else {
@@ -56,17 +56,18 @@ while {_check} do {
 		} forEach _units;
 
 		// ten minute timeout 
-		if (_it > 4) then {
+		if (_it > 2) then {
 			// any boarder still on the ground will bleed out 
 			{
 				if (vehicle _x == _x) then {
 					_distance = (getPos _x) distance _extractPos;
-					if ((_distance < 100) && (alive _x) && (_unit != (vehicle _unit))) then {
+					// if ((_distance < 100) && (alive _x) && (_x != (vehicle _x))) then {
+					if ((_distance < 100) && (alive _x)) then {
 						_x setDamage 1;
 						systemChat "unit bled out";
 					};
 				};	
-
+				sleep random 3;
 			} forEach _units;
 
 		};

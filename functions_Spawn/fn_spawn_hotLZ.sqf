@@ -1,7 +1,7 @@
 /*
-Hot LZ FNC 
+spawn_hotLZ FNC 
 Purpose: Spawns in opfor when helis are on approach to a designated LZ 
-Updated: 26 May 24  
+Updated: 03 June 24  
 Author: Reggs 
 
 _anchor: central point of activity for FNC 
@@ -41,12 +41,14 @@ while {_checkCycle} do {
 	{
 		if ((_anchor distance (getPos _x)) < _playerProxTrig) exitWith {
 			_checkCycle = false;
+			systemChat "NOTE, TRIGGERED FIGHTING";
 		};
 		sleep 0.5;
 	} forEach allPlayers; 
 
 	if (_it == 30) then {
 		_checkCycle = false;
+		systemChat "NOTE: FIGHTING TRIGGERED THROUGH ITERATIONS";
 		// what happens if this ^^ is the event, but mission is already over? We need a failsafe check, to delete if they do not serve a purpose 
 	};
 	sleep 10;

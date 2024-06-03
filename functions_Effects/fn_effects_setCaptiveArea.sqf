@@ -1,5 +1,5 @@
 /*
-Set Captive Area FNC 
+setCaptiveArea FNC 
 Purpose: takes a position and radius, and makes applies T or F to setCaptive for all inside 
 Updated: 26 May 24 
 Author: Reggs 
@@ -19,6 +19,7 @@ _affected = allUnits inAreaArray _setCapZone;
 
 {
 	_x setCaptive _setCap;
+	systemChat format ["%1 setCap: %2", _x, _setCap];
 } forEach _affected;
 
 deleteMarker _setCapZone;

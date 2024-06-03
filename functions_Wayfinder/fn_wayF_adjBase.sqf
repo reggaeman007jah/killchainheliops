@@ -1,10 +1,15 @@
 /*
+wayF_adjBase FNC 
+Purpose: Gives audio advice to player pilots to a fixed (main base) location 
+Updated: 03 June 24 
+Author: Reggs 
 
+To-Do 
+Make this neat like the dynamic version
+Add a Pathfinder dead ahead audio clip 
+will this work in MP using 'player'? Do we need params here, and pass 'this'?
+make this a playSound deal, like the dynamic FNC 
 */
-
-systemChat "DEBUG - running f_wayF_adjBase";
-
-// will this work in MP using 'player'? Do we need params here, and pass 'this'?
 
 private _fnc_getCoPilots = {
 	private _copilotTurrets = allTurrets _this select { getNumber ([_this, _x] call BIS_fnc_turretConfig >> "isCopilot") > 0 };
@@ -29,6 +34,7 @@ _coP say3D ["squelch", _loud, 1, true]; sleep 0.3;
 switch (true) do {
 	case (_rel == 0): { 
 		systemChat format ["Debug - Do not adjust, Target is dead ahead at %1 degrees", _rel]; 
+		// add audio here 
 	};
 	case (_rel >= 340): { 
 		systemChat "DEBUG - _rel heading must be between 340 and 359";

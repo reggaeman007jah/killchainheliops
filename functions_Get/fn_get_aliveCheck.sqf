@@ -1,7 +1,7 @@
 // --- alive check --- //
 
 /*
-Takes a unit, checks if theyre alive, returns true when they are alive, and returns false when they are not
+Takes a unit, checks if they're alive, returns true when they are alive, and returns false when they are not
 
 */
 

@@ -3,7 +3,13 @@
 
 
 RGG_medBase = [9197,6322]; // ie Pathfinder base 
-RGG_currentObj = [0,0];
+// RGG_currentObj = [0,0];
+RGG_currentObjR1 = [0,0];
+RGG_currentObjR2 = [0,0];
+RGG_currentObjR3 = [0,0];
+RGG_currentObjR4 = [0,0];
+RGG_currentObjR5 = [0,0];
+RGG_currentObjR6 = [0,0];
 
 // these globals declare whether a particular raptor heli is available for tasking 
 // RGG_rap1OnStat = false;

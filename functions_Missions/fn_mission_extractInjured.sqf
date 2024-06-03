@@ -18,6 +18,16 @@ params ["_extractPos", "_cycleLimit", "_lzRef", "_missionType", "_raptor"];
 
 _numInj = selectRandom [3,4,5,6];
 
+// marker for mission 
+_name = str _raptor;
+systemChat format ["Creating Mission Marker: %1", _name];
+_objective1 = createMarker [_name, _extractPos];
+_objective1 setMarkerShape "ELLIPSE";
+_objective1 setMarkerColor "ColorRed";
+_objective1 setMarkerSize [300, 300];
+_objective1 setMarkerAlpha 0.2; // debug
+
+
 _proxCheck = true;
 while {_proxCheck} do {
 	_data = [];
@@ -42,7 +52,7 @@ while {_proxCheck} do {
 	sleep 30;
 };
 
-// note while this solves the issue of a mission being generatedd under the feet of players ie it could be close to where they are while they are RTB, 
+// note while this solves the issue of a mission being generated under the feet of players ie it could be close to where they are while they are RTB, 
 // it could still generate a mission that can't be met as they are still having to fly over the spot with cargo.
 // this can stay here, does not do any harm, but a better solution is needed, ideally one that generates a new mission when the heli/s are all in base 
 
@@ -55,7 +65,8 @@ while {_checkCycle} do {
 
 	_cycle = _cycle + 1;
 	{
-		if ((_extractPos distance (getPos _x)) < 1600) exitWith {
+		if ((_extractPos distance (getPos _x)) < 2000) exitWith {
+			systemChat "mission_extractInjured: within 2k";
 			_checkCycle = false;
 			
 			[_extractPos] spawn RGGs_fnc_spawn_advanceTeam;
@@ -76,7 +87,7 @@ while {_checkCycle} do {
 	// 	// mission has failed as took too long to get to site  
 	// };
 
-	sleep 10;
+	sleep 5;
 }; 
 
 // checkCycle is used to time-limit the mission, and while you could be clever and calc time to get to site va distance (giving longer times for further away places, 

@@ -15,6 +15,9 @@ class RGGo {
 		class order_autoBoard {
 			Description = "orders given AI to board a nearby heli on prox";
 		};
+		class order_autoBoardV2 {
+			Description = "orders given AI to board a nearby heli on prox - trying new idea";
+		};
 		class order_autoUnboard {
 			Description = "orders given AI to unboard on landing at a given zone";
 		};

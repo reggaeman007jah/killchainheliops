@@ -13,7 +13,13 @@ class RGGg {
 		};
 		class get_allPlayersOnGround {
 			Description = "This function will return all players on the ground";
-		};
+		}; 
+		class get_allPlrsInAllHelis {
+			Description = "Returns an array of all players in all vehicles";
+		}; 
+		class get_allPlrsInHeli {
+			Description = "Returns an array of all players in a single given vic";
+		}; 
 		class get_anyPlayer {
 			Description = "This function will return a random player in game";
 		};

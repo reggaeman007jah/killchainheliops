@@ -1,13 +1,19 @@
 /*
-Note: Make sure to check height before running - if heli is on ground, or rather speed is very slow, then always give theb OC 
-The adjust left/right only makes sense when moving 
+wayF_adj FNC 
+Purpose: to relay audio advice to plpayer pilot given a passed target location (e.g. adjust left 2 degrees)
+Updated: 03 June 24 
+Author: Reggs 
 
-Note: Make sure this only runs if the player is in the heli 
+Notes 
+The adjust left/right only makes sense when moving - make sure to check height before running - if heli is on ground, or rather speed is very slow, then always just give the OC 
+Make sure this only runs if the player is in the heli 
 
 {playSound "Left01"} remoteExec ["call", _player];
-*/
 
-systemChat "DEBUG - running f_wayF_adj";
+This needs a code review! It looks like there are 20 results in the switch, but the degree range is 30...?!
+
+This also needs to use a time-based calc for direction, and not the direction of the heli, as yaw can affect this while moving 
+*/
 
 private _fnc_getCoPilots = {
 	private _copilotTurrets = allTurrets _this select { getNumber ([_this, _x] call BIS_fnc_turretConfig >> "isCopilot") > 0 };
@@ -18,9 +24,25 @@ private _fnc_getCoPilots = {
 // _marker = str player;  
 
 _player = player; 
-_pos = RGG_currentObj;  
 _heli = vehicle _player;  
+
+_pos = [0,0];
+systemChat format ["wayF_adj _pos: %1", _pos]; 
+systemChat format ["wayF_adj RGG_currentObjR1: %1", RGG_currentObjR1]; 
+
+switch (_heli) do {
+	case raptor1: { _pos = RGG_currentObjR1 };
+	case raptor2: { _pos = RGG_currentObjR2 };
+	case raptor3: { _pos = RGG_currentObjR3 };
+	case raptor4: { _pos = RGG_currentObjR4 };
+	case raptor5: { _pos = RGG_currentObjR5 };
+	case raptor6: { _pos = RGG_currentObjR6 };
+	default { systemChat "switch error - wayF_adj"};
+};
+systemChat format ["wayF_adj _pos after switch: %1", _pos]; 
+// _pos = RGG_currentObj;  
 _cp = (_heli call _fnc_getCoPilots);
+systemChat format ["Result of _cp local FNC: %1", _cp]; // use this to ensure this only proceeds if there is a CP alive and in the same heli 
 _coP = _cp select 0; 
 _loud = 30; 
 _new = 0;
