@@ -41,7 +41,7 @@ while {_checkCycle} do {
 	{
 		if ((_anchor distance (getPos _x)) < _playerProxTrig) exitWith {
 			_checkCycle = false;
-			systemChat "NOTE, TRIGGERED FIGHTING";
+			systemChat "NOTE, TRIGGERED FIGHTING FOR ALL UNITS - CHECK THIS WORKS";
 		};
 		sleep 0.5;
 	} forEach allPlayers; 

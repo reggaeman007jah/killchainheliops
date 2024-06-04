@@ -23,7 +23,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="killchainHeliOps";
+sourceName="killchainheliops";
 addons[]=
 {
 	"characters_f_vietnam_04_c",

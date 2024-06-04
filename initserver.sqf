@@ -9,7 +9,6 @@ RGG_currentObjR2 = [0,0];
 RGG_currentObjR3 = [0,0];
 RGG_currentObjR4 = [0,0];
 RGG_currentObjR5 = [0,0];
-RGG_currentObjR6 = [0,0];
 
 // these globals declare whether a particular raptor heli is available for tasking 
 // RGG_rap1OnStat = false;
@@ -25,10 +24,17 @@ RGG_rap2onTask = false;
 RGG_rap3onTask = false;
 RGG_rap4onTask = false;
 RGG_rap5onTask = false;
-RGG_rap6onTask = false;
 
 // send rap number through function chain to ensure it gets to deleteAllInArea - so when run, can free up said raptor 
 
+
+// clear cargo prevent delays to units boarding, as they heal / rearm before boarding when close to a heli with supplies 
+_raptors = [raptor1, raptor2, raptor3, raptor4, raptor5];
+{
+	clearWeaponCargoGlobal _x;
+	clearItemCargoGlobal _x;
+	clearBackpackCargoGlobal _x;
+} forEach _raptors;
 
 
 // RGG_MISSIONLIVE = false;

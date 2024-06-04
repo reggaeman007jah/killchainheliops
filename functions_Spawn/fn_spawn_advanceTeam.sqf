@@ -11,8 +11,8 @@ systemChat "spawning in advance team";
 
 _smoke = createVehicle ["G_40mm_smokeYELLOW", _spawnPoint, [], 0, "none"]; 
 
-for "_i" from 1 to (10 + (random 20)) do {
-	_grp = createGroup [independent, true];
+for "_i" from 1 to (15 + (random 20)) do {
+	_grp = createGroup [west, true];
 	_class = [] call RGGg_fnc_get_randomArmyClassname;  
 	_dir = random 359;
 	_pos = _spawnPoint getPos [(20 + (random 60)), _dir];
