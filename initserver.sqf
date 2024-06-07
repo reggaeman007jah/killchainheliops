@@ -34,6 +34,7 @@ _raptors = [raptor1, raptor2, raptor3, raptor4, raptor5];
 	clearWeaponCargoGlobal _x;
 	clearItemCargoGlobal _x;
 	clearBackpackCargoGlobal _x;
+	clearMagazineCargoGlobal _x;
 } forEach _raptors;
 
 

@@ -1,14 +1,10 @@
 /*
 Order Autoboard FNC 
 Updated: 23 May 24
-Purpose: Orders given AI unit to auto-board any heli nearby  
+Purpose: Orders given AI units to auto-board any heli nearby  
 Author: Reggs
 
 Notes:
-If there are, say, 3 units to be picked up, each unit will have this process running, to ensure each unit (which is in their own group) will take 
-decisions independent of others, and always go to the nearest heli - which is important as this is an MP experience, ie pickup scripts must work 
-in MP, without bugs!!
-
 How do we manage the heli never landing - process must be time-limited! Can this be done via a separate process, as a pass/fail assessment for the pickup mission?
 
 */

@@ -9,7 +9,7 @@ params ["_spawnPoint", "_trigDist"];
 
 systemChat "spawning in advance team";
 
-_smoke = createVehicle ["G_40mm_smokeYELLOW", _spawnPoint, [], 0, "none"]; 
+_smoke = createVehicle ["G_40mm_smokeYELLOW", _spawnPoint, [], 0, "none"]; // this should really be spawned from injuredSpawn FNC, not this one 
 
 for "_i" from 1 to (15 + (random 20)) do {
 	_grp = createGroup [west, true];
