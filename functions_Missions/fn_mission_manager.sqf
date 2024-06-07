@@ -28,12 +28,12 @@ _target = getMarkerPos _lzRef;
 _testHeli = str _heli;
 
 switch (_testHeli) do {
-	case "raptor1": { RGG_currentObjR1 = _target };
-	case "raptor2": { RGG_currentObjR2 = _target };
-	case "raptor3": { RGG_currentObjR3 = _target };
-	case "raptor4": { RGG_currentObjR4 = _target };
-	case "raptor5": { RGG_currentObjR5 = _target };
-	case "raptor6": { RGG_currentObjR6 = _target };
+	case "raptor1": { RGG_currentObjR1 = _target; publicVariable "RGG_currentObjR1"; };
+	case "raptor2": { RGG_currentObjR2 = _target; publicVariable "RGG_currentObjR2"; };
+	case "raptor3": { RGG_currentObjR3 = _target; publicVariable "RGG_currentObjR3"; };
+	case "raptor4": { RGG_currentObjR4 = _target; publicVariable "RGG_currentObjR4"; };
+	case "raptor5": { RGG_currentObjR5 = _target; publicVariable "RGG_currentObjR5"; };
+	case "raptor6": { RGG_currentObjR6 = _target; publicVariable "RGG_currentObjR6"; };
 	default { systemChat "switch error mission_manager obj"};
 };
 

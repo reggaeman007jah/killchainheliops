@@ -13,7 +13,7 @@ _smoke = createVehicle ["G_40mm_smokeYELLOW", _spawnPoint, [], 0, "none"]; // th
 
 for "_i" from 1 to (15 + (random 20)) do {
 	_grp = createGroup [west, true];
-	_class = [] call RGGg_fnc_get_randomArmyClassname;  
+	_class = [1] call RGGg_fnc_get_randomArmyClassname;  
 	_dir = random 359;
 	_pos = _spawnPoint getPos [(20 + (random 60)), _dir];
 	_unit = _grp createUnit [_class, _pos, [], 1, "none"]; 

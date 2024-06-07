@@ -63,8 +63,11 @@ while {_check} do {
 					_distance = (getPos _x) distance _extractPos;
 					// if ((_distance < 100) && (alive _x) && (_x != (vehicle _x))) then {
 					if ((_distance < 100) && (alive _x)) then {
-						_x setDamage 1;
-						systemChat "unit bled out";
+						_chance = selectRandom [1,2,3,4,5];
+						if (_chance == 1) then {
+							_x setDamage 1;
+							systemChat "unit bled out";							
+						};
 					};
 				};	
 				sleep random 3;
@@ -75,6 +78,6 @@ while {_check} do {
 
 	// add timelimit check, to generate a failstate 
 
-	sleep 60;
+	sleep 20;
 };
 

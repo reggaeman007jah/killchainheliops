@@ -19,7 +19,7 @@ _toBoard = [];
 for "_i" from 1 to _numInj do {
 	systemChat "creating injured unit";
 	_indiGroup = createGroup west;
-	_class = [] call RGGg_fnc_get_randomArmyClassname;  
+	_class = [1] call RGGg_fnc_get_randomArmyClassname;  
 	_pos = _extractPos getPos [(random 15), (random 359)];
 	_unit = _indiGroup createUnit [_class, _pos, [], 0.1, "none"]; 
 	_toBoard pushBack _unit;

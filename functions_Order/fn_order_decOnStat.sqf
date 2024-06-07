@@ -45,7 +45,8 @@ if !(isNull objectParent _player) then {
 			if (RGG_rap3onTask == false) then {
 				RGG_rap3onTask = true;
 				publicVariable "RGG_rap3onTask";
-				[_heli] spawn RGGm_fnc_mission_manager;	
+				// [_heli] spawn RGGm_fnc_mission_manager;	// must be executed from server! below might work?
+				[_heli] remoteExec ["RGGm_fnc_mission_manager", 2]; 
 			} else {
 				systemChat "Raptor 3 is already tasked - complete current task before taking another";
 			};
