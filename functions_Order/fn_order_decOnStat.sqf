@@ -44,6 +44,7 @@ if !(isNull objectParent _player) then {
 		case "3": { 
 			if (RGG_rap3onTask == false) then {
 				RGG_rap3onTask = true;
+				publicVariable "RGG_rap3onTask";
 				[_heli] spawn RGGm_fnc_mission_manager;	
 			} else {
 				systemChat "Raptor 3 is already tasked - complete current task before taking another";

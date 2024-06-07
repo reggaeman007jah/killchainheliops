@@ -2,13 +2,19 @@
 
 
 
-RGG_medBase = [9197,6322]; // ie Pathfinder base 
+RGG_medBase = [9197,6322]; // ie Pathfinder base
+publicVariable "RGG_medBase";
 // RGG_currentObj = [0,0];
 RGG_currentObjR1 = [0,0];
 RGG_currentObjR2 = [0,0];
 RGG_currentObjR3 = [0,0];
 RGG_currentObjR4 = [0,0];
 RGG_currentObjR5 = [0,0];
+publicVariable "RGG_currentObjR1";
+publicVariable "RGG_currentObjR2";
+publicVariable "RGG_currentObjR3";
+publicVariable "RGG_currentObjR4";
+publicVariable "RGG_currentObjR5";
 
 // these globals declare whether a particular raptor heli is available for tasking 
 // RGG_rap1OnStat = false;
@@ -24,6 +30,11 @@ RGG_rap2onTask = false;
 RGG_rap3onTask = false;
 RGG_rap4onTask = false;
 RGG_rap5onTask = false;
+publicVariable "RGG_rap1onTask";
+publicVariable "RGG_rap2onTask";
+publicVariable "RGG_rap3onTask";
+publicVariable "RGG_rap4onTask";
+publicVariable "RGG_rap5onTask";
 
 // send rap number through function chain to ensure it gets to deleteAllInArea - so when run, can free up said raptor 
 

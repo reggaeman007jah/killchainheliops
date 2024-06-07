@@ -60,6 +60,7 @@ while {_chk} do {
 			case "3": { 
 				if (RGG_rap3onTask == true) then {
 					RGG_rap3onTask = false;
+					publicVariable "RGG_rap3onTask";
 					systemChat "delete_allWithinArea - RGG_rap3onTask is true, now changed to false, sending new mission";
 					[_raptorNum] spawn RGGm_fnc_mission_manager;	
 				} else {
